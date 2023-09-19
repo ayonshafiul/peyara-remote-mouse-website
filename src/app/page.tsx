@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-24">
-      <Image src={"/icon.png"} width={152} height={152} />
+      <Image src={"/icon.png"} width={152} height={152} alt={"Icon"} />
       <div className="flex flex-row flex-wrap my-10">
         <Button asChild>
           <Link href="#" className="download-btn">
