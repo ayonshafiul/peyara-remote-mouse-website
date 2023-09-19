@@ -4,7 +4,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-24">
-      <Image src={"/icon.png"} width={152} height={152} alt={"Icon"} />
+      <Image
+        src={"/icon.png"}
+        width={152}
+        height={152}
+        alt={"Desktop Client Logo"}
+      />
       <div className="flex flex-row flex-wrap my-10">
         <Button asChild>
           <Link href="#" className="download-btn">
@@ -33,6 +38,29 @@ export default function Home() {
             Download for Linux
           </Link>
         </Button>
+      </div>
+      <Image
+        src={"/client-icon.png"}
+        width={152}
+        height={152}
+        alt={"Mobile Client Logo"}
+      />
+      <div className="flex flex-row flex-wrap my-10">
+        <Link
+          href={
+            "https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara"
+          }
+        >
+          <Image
+            src={"/google-play.png"}
+            width={135}
+            height={40}
+            alt={"Mobile Client Logo"}
+          />
+        </Link>
+      </div>
+      <div>
+        Google Play and the Google Play logo are trademarks of Google LLC.
       </div>
     </main>
   );
