@@ -45,7 +45,8 @@ export default function Home() {
         height={152}
         alt={"Mobile Client Logo"}
       />
-      <div className="flex flex-row flex-wrap my-10">
+
+      <div className="flex flex-row justify-center items-center gap-10 flex-wrap my-10">
         <Link
           href={
             "https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara"
@@ -58,9 +59,18 @@ export default function Home() {
             alt={"Mobile Client Logo"}
           />
         </Link>
-      </div>
-      <div>
-        Google Play and the Google Play logo are trademarks of Google LLC.
+
+        <Link href={"#"}>
+          <Image
+            src={"/appstore.png"}
+            width={120}
+            height={40}
+            alt={"Mobile Client Logo"}
+            style={{
+              opacity: 0.2,
+            }}
+          />
+        </Link>
       </div>
     </main>
   );
