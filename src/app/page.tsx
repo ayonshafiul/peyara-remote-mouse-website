@@ -10,7 +10,8 @@ export default function Home() {
         height={152}
         alt={"Desktop Client Logo"}
       />
-      <div className="flex flex-row flex-wrap my-10">
+      <div className="my-2">Version: 0.0.1</div>
+      <div className="flex flex-row flex-wrap mb-10">
         <Button asChild>
           <Link
             href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.1/Peyara.Remote.Mouse.Server-0.0.1.Setup.exe"
