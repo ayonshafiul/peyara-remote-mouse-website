@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-24">
+    <main className="flex min-h-screen flex-col items-center justify-start py-24 px-4">
       <Image
         src={"/icon.png"}
         width={152}
@@ -11,7 +11,7 @@ export default function Home() {
         alt={"Desktop Client Logo"}
       />
       <div className="my-2">Version: 0.0.1</div>
-      <div className="flex flex-row flex-wrap mb-10">
+      <div className="flex flex-row flex-wrap mb-10 justify-center">
         <Button asChild>
           <Link
             href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.1/Peyara.Remote.Mouse.Server-0.0.1.Setup.exe"
