@@ -10,11 +10,11 @@ export default function Home() {
         height={152}
         alt={"Desktop Client Logo"}
       />
-      <div className="my-2">Version: 0.0.3</div>
+      <div className="my-2">Version: 0.0.4</div>
       <div className="flex flex-row flex-wrap mb-10 justify-center">
         <Button asChild>
           <Link
-            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.3/Peyara.Remote.Mouse.Server-0.0.3.Setup.exe"
+            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/Peyara.Remote.Mouse.Server-0.0.4.Setup.exe"
             className="download-btn"
           >
             <img
@@ -26,7 +26,7 @@ export default function Home() {
         </Button>
         <Button asChild>
           <Link
-            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.3/Peyara.Remote.Mouse.Server-darwin-x64-0.0.3.zip"
+            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/Peyara.Remote.Mouse.Server-darwin-x64-0.0.4.zip"
             className="download-btn"
           >
             <img
@@ -38,7 +38,7 @@ export default function Home() {
         </Button>
         <Button asChild>
           <Link
-            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.3/peyara-server_0.0.3_amd64.deb"
+            href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/peyara-server_0.0.4_amd64.deb"
             className="download-btn"
           >
             <img
