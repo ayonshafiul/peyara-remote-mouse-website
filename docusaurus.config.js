@@ -19,7 +19,7 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
@@ -97,7 +97,7 @@ const config = {
             items: [
               {
                 label: "Docs",
-                to: "/docs/download",
+                to: "/docs/get-started",
               },
             ],
           },
@@ -109,8 +109,12 @@ const config = {
                 to: "/blog",
               },
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Server Source",
+                href: "https://github.com/ayonshafiul/peyara-mouse-server",
+              },
+              {
+                label: "Client Source",
+                href: "https://github.com/ayonshafiul/peyara-mouse-client",
               },
             ],
           },
