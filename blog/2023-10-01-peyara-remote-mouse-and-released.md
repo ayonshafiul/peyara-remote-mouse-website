@@ -56,4 +56,4 @@ The Peyara Remote Mouse and Keyboard mobile client app, available for Android (a
 
 Peyara Remote Mouse and Keyboard is driven by an open-source ethos, inviting the community to contribute and enhance the software. Enjoy an ad-free experience, focusing on the functionality that matters most to you.
 
-[Get Started](https://peyara-remote-mouse.vercel.app) by downloading both desktop server and the mobile client.
+[Get Started](/docs/get-started) by downloading both desktop server and the mobile client.
