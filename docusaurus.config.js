@@ -84,7 +84,12 @@ const config = {
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/ayonshafiul/peyara-mouse-server",
-            label: "GitHub",
+            label: "GitHub Server",
+            position: "right",
+          },
+          {
+            href: "https://github.com/ayonshafiul/peyara-mouse-client",
+            label: "GitHub Client",
             position: "right",
           },
         ],
