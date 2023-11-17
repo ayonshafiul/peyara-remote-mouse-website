@@ -89,6 +89,17 @@ const config = {
           },
         ],
       },
+      metadata: [
+        {
+          name: "keywords",
+          content:
+            "remote mouse, remote keyboard, wifi mouse, wifi keybaord, media controls, android remote mouse",
+        },
+        {
+          name: "google-site-verification",
+          content: "oLCr8VPTgZN1qiVRA2tA_Vfj2MAnr9hR79DQpfdJ1_o",
+        },
+      ],
       footer: {
         style: "dark",
         links: [
