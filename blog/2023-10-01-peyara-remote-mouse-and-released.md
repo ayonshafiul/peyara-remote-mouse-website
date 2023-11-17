@@ -1,7 +1,7 @@
 ---
 slug: peyara-remote-mouse-and-released
 title: Peyara Remote Mouse and Keyboard Released
-tags: [wifi remote, remote mouse]
+tags: [wifi remote, remote mouse, remote keyboard, media controls]
 authors: ayonshafiul
 ---
 
