@@ -18,7 +18,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,46 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.download-btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.download-btn:hover {
+  color: white;
+}
+
+.client-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+.client-image {
+  width: 150px;
+  height: 150px;
+}
+
+.disabled {
+  opacity: 0.5;
 }

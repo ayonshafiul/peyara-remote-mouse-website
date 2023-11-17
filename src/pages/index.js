@@ -5,6 +5,8 @@ import Layout from "@theme/Layout";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
+import Features from "../components/Features.mdx";
+import Downloads from "../components/Downloads";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -36,7 +38,12 @@ export default function Home() {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main></main>
+      <main>
+        <Downloads />
+        <div className={styles.centered}>
+          <Features />
+        </div>
+      </main>
     </Layout>
   );
 }
