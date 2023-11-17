@@ -66,7 +66,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/social-banner.png",
       navbar: {
         title: "Peyara Remote Mouse and Keyboard",
         logo: {
