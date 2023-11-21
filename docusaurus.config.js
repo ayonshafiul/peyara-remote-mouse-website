@@ -104,6 +104,10 @@ const config = {
           name: "google-site-verification",
           content: "oLCr8VPTgZN1qiVRA2tA_Vfj2MAnr9hR79DQpfdJ1_o",
         },
+        {
+          name: "msvalidate.01",
+          content: "0B78E31A23555001C9082A53830A4373",
+        },
       ],
       footer: {
         style: "dark",
