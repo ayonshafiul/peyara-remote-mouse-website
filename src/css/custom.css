@@ -16,6 +16,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 1);
   --ifm-breadcrumb-color-active: black;
+  --ifm-menu-color-active: black;
   --ifm-link-color: black;
 }
 
@@ -31,6 +32,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-breadcrumb-color-active: #ffeb3b;
   --ifm-link-color: #ffeb3b;
+  --ifm-menu-color-active: #ffeb3b;
 }
 
 .download-btn-container {
