@@ -9,7 +9,7 @@ export default function Downloads() {
       </div>
       <div className="download-btn-container">
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/Peyara.Remote.Mouse.Server-0.0.4.Setup.exe"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.599/PeyaraRemoteMouseServer-0.0.5.Setup.exe"
           className="download-btn"
         >
           <img
@@ -19,7 +19,7 @@ export default function Downloads() {
           Download for Windows
         </Link>
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/Peyara.Remote.Mouse.Server-darwin-x64-0.0.4.zip"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.599/PeyaraRemoteMouseServer-darwin-x64-0.0.5.zip"
           className="download-btn"
         >
           <img
@@ -29,7 +29,7 @@ export default function Downloads() {
           Download for Mac
         </Link>
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.4/peyara-server_0.0.4_amd64.deb"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.599/peyara-server_0.0.5_amd64.deb"
           className="download-btn"
         >
           <img
