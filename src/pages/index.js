@@ -5,7 +5,7 @@ import Layout from "@theme/Layout";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
-import Features from "../components/Features.mdx";
+import Features from "../components/Features";
 import Downloads from "../components/Downloads";
 
 function HomepageHeader() {
@@ -42,9 +42,8 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <Downloads />
-        <div className={styles.centered}>
-          <Features />
-        </div>
+
+        <Features />
       </main>
     </Layout>
   );
