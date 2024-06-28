@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Peyara Remote Mouse and Keyboard",
   tagline:
-    "An open source, zero ads, cross platform mobile client providing touchpad, keyboard and media controls for wirelessly controlling desktop  connected to the same wifi.",
+    "Turn your mobile into a wireless mouse and keyboard combo with Peyara Remote Mouse.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
