@@ -8,7 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Peyara Remote Mouse and Keyboard",
+  title: "Peyara Remote Mouse",
   tagline:
     "Turn your mobile into a wireless mouse and keyboard combo with Peyara Remote Mouse.",
   favicon: "img/favicon.ico",
@@ -68,9 +68,9 @@ const config = {
     ({
       image: "img/social-banner.png",
       navbar: {
-        title: "Peyara Remote Mouse and Keyboard",
+        title: "Peyara Remote Mouse",
         logo: {
-          alt: "Peyara Remote Mouse and Keyboard",
+          alt: "Peyara Remote Mouse",
           src: "img/logo.png",
         },
         items: [
