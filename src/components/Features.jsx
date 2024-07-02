@@ -52,6 +52,7 @@ const FEATURES = [
 export default function Features() {
   return (
     <div className="feature-wrapper">
+      <h1 className="feature-text">Features</h1>
       {FEATURES.map((feature, idx) => {
         return (
           <div className="feature-container" key={idx}>

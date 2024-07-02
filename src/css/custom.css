@@ -77,6 +77,11 @@
   opacity: 0.5;
 }
 
+.feature-text {
+  font-weight: bold;
+  text-align: center;
+}
+
 .feature-wrapper {
   margin-bottom: 300px;
 }

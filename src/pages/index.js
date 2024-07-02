@@ -36,7 +36,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Remote Mouse and Keyboard controls for controlling desktop`}
+      title={`Turn your mobile into a wireless mouse and keyboard combo with Peyara Remote Mouse.`}
       description={`${siteConfig.tagline}`}
     >
       <HomepageHeader />
