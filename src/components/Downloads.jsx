@@ -6,10 +6,12 @@ export default function Downloads() {
     <div>
       <div className="client-image-container">
         <img src="/img/server-logo.png" className="client-image" />
+        <div className="version-text">v0.0.9</div>
       </div>
+
       <div className="download-btn-container">
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.6/PeyaraRemoteMouseServer-0.0.6.Setup.exe"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.9/PeyaraRemoteMouseServer-0.0.9.Setup.exe"
           className="download-btn"
         >
           <img
@@ -19,7 +21,7 @@ export default function Downloads() {
           Download for Windows
         </Link>
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.6/PeyaraRemoteMouseServer-darwin-x64-0.0.6.zip"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.9/PeyaraRemoteMouseServer-darwin-x64-0.0.9.zip"
           className="download-btn"
         >
           <img
@@ -29,7 +31,7 @@ export default function Downloads() {
           Download for Mac
         </Link>
         <Link
-          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.6/peyara-server_0.0.6_amd64.deb"
+          href="https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.0.9/peyara-server_0.0.9_amd64.deb"
           className="download-btn"
         >
           <img
@@ -41,6 +43,7 @@ export default function Downloads() {
       </div>
       <div className="client-image-container">
         <img src="/img/client-logo.png" className="client-image" />
+        <div className="version-text">v1.0.32</div>
       </div>
       <div className="download-btn-container">
         <Link
