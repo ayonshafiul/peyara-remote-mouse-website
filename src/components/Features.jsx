@@ -9,7 +9,7 @@ const FEATURES = [
       "Automatic server detection",
       "Fast device switching",
     ],
-    image: "/img/connect-server.png",
+    image: "/img/home.png",
   },
   {
     title: "Touchpad Features",
@@ -20,7 +20,7 @@ const FEATURES = [
       "Two Finger Scroll gesture",
       "Three Finger pan gesture to move",
     ],
-    image: "/img/touchpad.png",
+    image: "/img/touchpad-2.png",
   },
   {
     title: "Keyboard Features",
@@ -39,7 +39,7 @@ const FEATURES = [
       "Share text from pc to mobile",
       "Instant copy to clipboard with a single click.",
     ],
-    image: "/img/clipboard.png",
+    image: "/img/touchpad.png",
   },
   {
     title: "Media Features",
