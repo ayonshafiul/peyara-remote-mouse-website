@@ -43,7 +43,7 @@ export default function Downloads() {
       </div>
       <div className="client-image-container">
         <img src="/img/client-logo.png" className="client-image" />
-        <div className="version-text">v1.0.32</div>
+        <div className="version-text">v1.0.35</div>
       </div>
       <div className="download-btn-container">
         <Link

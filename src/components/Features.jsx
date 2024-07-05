@@ -33,6 +33,15 @@ const FEATURES = [
     image: "/img/keyboard.png",
   },
   {
+    title: "Clipboard Features",
+    features: [
+      "Send Urls, text messages, notes from mobile to pc",
+      "Share text from pc to mobile",
+      "Instant copy to clipboard with a single click.",
+    ],
+    image: "/img/clipboard.png",
+  },
+  {
     title: "Media Features",
     features: [
       "Control media volume",
