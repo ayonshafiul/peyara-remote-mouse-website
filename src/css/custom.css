@@ -97,12 +97,22 @@
   padding: 20px;
   max-width: 768px;
   margin: 20px auto;
-}
-
-.feature-container:not(:first-child) {
   animation: scale-a-lil linear both;
   animation-timeline: view();
   animation-range: 10vh 50vh;
+}
+
+@media (max-width: 768px) {
+  .feature-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    animation: scale-a-lil linear both;
+    animation-timeline: view();
+    animation-range: 10vh 50vh;
+  }
 }
 
 .feature-item {
@@ -114,13 +124,10 @@
 .feature-img {
   width: 300px;
 }
-.feature-img:nth-child(even) {
-  animation: move-a-lil 2s ease-out -2s infinite alternate forwards;
-}
 
 @keyframes scale-a-lil {
   from {
-    transform: translateX(-200%);
+    transform: translateY(-20%);
     opacity: 0;
   }
   to {
