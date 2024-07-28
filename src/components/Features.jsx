@@ -12,6 +12,16 @@ const FEATURES = [
     image: "/img/home.png",
   },
   {
+    title: "Screen Share",
+    features: ["Share Scereen with one tap"],
+    image: "/img/screen-desk.png",
+  },
+  {
+    title: "Control From Mobile",
+    features: ["Control Desktop From mobile"],
+    image: "/img/screen-mob.png",
+  },
+  {
     title: "Touchpad Features",
     features: [
       "Single Tap",
