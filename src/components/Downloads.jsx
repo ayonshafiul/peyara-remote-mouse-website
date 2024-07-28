@@ -43,7 +43,7 @@ export default function Downloads() {
       </div>
       <div className="client-image-container">
         <img src="/img/client-logo.png" className="client-image" />
-        <div className="version-text">v2.0.1</div>
+        <div className="version-text">v2.0.2</div>
       </div>
       <div className="download-btn-container">
         <Link
@@ -52,6 +52,15 @@ export default function Downloads() {
           }
         >
           <img src="/img/google-play.png" />
+        </Link>
+        <Link
+          href="https://peyara-remote-mouse.en.uptodown.com/android"
+          title="Download Peyara Remote Mouse"
+        >
+          <img
+            src="https://stc.utdstc.com/img/mediakit/download-aao-small.png"
+            alt="Download Peyara Remote Mouse"
+          />
         </Link>
         <Link href={"#"} className="disabled">
           <img src="/img/appstore.png" />

@@ -97,9 +97,6 @@
   padding: 20px;
   max-width: 768px;
   margin: 20px auto;
-  animation: scale-a-lil linear both;
-  animation-timeline: view();
-  animation-range: 10vh 50vh;
 }
 
 @media (max-width: 768px) {
@@ -109,9 +106,6 @@
     justify-content: center;
     padding: 20px;
     margin: 20px auto;
-    animation: scale-a-lil linear both;
-    animation-timeline: view();
-    animation-range: 10vh 50vh;
   }
 }
 
