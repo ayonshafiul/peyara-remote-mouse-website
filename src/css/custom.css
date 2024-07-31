@@ -56,6 +56,13 @@
   border-radius: 0.5em;
 }
 
+.download-btn-small {
+  background-color: var(--docusaurus-highlighted-code-line-bg);
+  color: white;
+  padding: 10px;
+  border-radius: 0.5em;
+}
+
 .download-btn:hover {
   color: white;
 }
