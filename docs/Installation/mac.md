@@ -3,7 +3,7 @@ title: Installation For Mac
 sidebar_position: 1
 ---
 
-[↓ <u>Click here to download for Mac</u>](https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.1.2/PeyaraRemoteMouseServer-darwin-x64-0.1.2.zip)
+[↓ <u>Click here to download for Mac</u>](https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v0.1.3/PeyaraRemoteMouseServer-darwin-x64-0.1.3.zip)
 
 ### Extrack Zip File
 
