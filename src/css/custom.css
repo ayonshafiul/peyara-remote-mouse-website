@@ -145,3 +145,11 @@
     transform: translateY(2%);
   }
 }
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: var(--ifm-color-primary-darker);
+  text-decoration: none;
+}
