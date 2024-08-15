@@ -6,7 +6,7 @@ export default function Downloads() {
     <div>
       <div className="client-image-container">
         <img src="/img/server-logo.png" className="client-image" />
-        <div className="version-text">v0.1.3</div>
+        <div className="version-text">v1.0.0</div>
       </div>
 
       <div className="download-btn-container">
@@ -34,7 +34,7 @@ export default function Downloads() {
       </div>
       <div className="client-image-container">
         <img src="/img/client-logo.png" className="client-image" />
-        <div className="version-text">v2.0.3</div>
+        <div className="version-text">v2.0.4</div>
       </div>
       <div className="download-btn-container">
         <Link
