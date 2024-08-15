@@ -7,9 +7,9 @@ sidebar_position: 1
 
 [↓ <u>Click to download older versions </u>](https://github.com/ayonshafiul/peyara-mouse-server/releases)
 
-## Update Instructions (Must do these everytime before updating to a newer version!)
+If this is the first time you are installing Peyara Remote Mouse on your Mac **[Installation](/docs/Installation/mac#installation)** Instructions.
 
-If this is the first time you are installing Peyara Remote Mouse on your Mac skip this section and follow **[Installation](/docs/Installation/mac#installation)** Section Instructions.
+## Update Instructions (Must do these everytime before updating to a newer version!)
 
 If you've already installed a previous version of Peyara Remouse Mouse Desktop and trying to update to a newer version please follow these steps to remove both **Screen Sharing** and **Accessibility** Permissions first.
 
