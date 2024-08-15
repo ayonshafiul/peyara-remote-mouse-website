@@ -17,11 +17,11 @@ If you are updating this app follow **[<u>Update Instructions</u>](/docs/Install
 
 Double click to open the update file
 
-![Open From File Explorer](/img/windows/ss4.png)
+![Open From File Explorer](/img/windows/wss4.png)
 
 ### Allow Firewall access
 
-![Firewall Access](/img/windows/ss3.png)
+![Firewall Access](/img/windows/wss3.png)
 
 ## Installation Instructions
 
@@ -29,20 +29,20 @@ Double click to open the update file
 
 Double click to open the downloaded file
 
-![Open From File Explorer](/img/windows/ss4.png)
+![Open From File Explorer](/img/windows/wss4.png)
 
 ### Select More Info
 
 **This warning is shown as the build executable is not signed**. Rest assured, It is safe to use. So, you can go ahead and Click on More info.
 
-![More Info](/img/windows/ss1.png)
+![More Info](/img/windows/wss1.png)
 
 ### Select Run Anyway
 
 Click on Run Anyway.
 
-![Run Anyway](/img/windows/ss2.png)
+![Run Anyway](/img/windows/wss2.png)
 
 ### Allow Firewall access
 
-![Firewal Access](/img/windows/ss3.png)
+![Firewal Access](/img/windows/wss3.png)
