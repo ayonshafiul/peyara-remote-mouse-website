@@ -21,6 +21,7 @@ const FEATURES = [
     features: ["Control Desktop From mobile"],
     image: "/img/screen-mob.png",
   },
+
   {
     title: "Touchpad Features",
     features: [
@@ -31,6 +32,15 @@ const FEATURES = [
       "Three Finger pan gesture to move",
     ],
     image: "/img/touchpad-2.png",
+  },
+  {
+    title: "File Share",
+    features: [
+      "Share Images, Videos and Documents from your phone to your PC wirelessly",
+      "Ability to share multiple files",
+      "Lossless file sharing",
+    ],
+    image: "/img/files.png",
   },
   {
     title: "Keyboard Features",
