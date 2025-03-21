@@ -53,7 +53,7 @@ export default function Downloads() {
             alt="Download Peyara Remote Mouse"
           />
         </Link>
-        <Link href={"#"} className="disabled">
+        <Link href={"https://apps.apple.com/us/app/peyara-remote-mouse/id6743374036"}>
           <img src="/img/appstore.png" />
         </Link>
       </div>
