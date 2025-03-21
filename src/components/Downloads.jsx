@@ -44,6 +44,9 @@ export default function Downloads() {
         >
           <img src="/img/google-play.png" />
         </Link>
+        <Link href={"https://apps.apple.com/us/app/peyara-remote-mouse/id6743374036"}>
+          <img src="/img/appstore.png" />
+        </Link>
         <Link
           href="https://peyara-remote-mouse.en.uptodown.com/android"
           title="Download Peyara Remote Mouse"
@@ -53,9 +56,7 @@ export default function Downloads() {
             alt="Download Peyara Remote Mouse"
           />
         </Link>
-        <Link href={"https://apps.apple.com/us/app/peyara-remote-mouse/id6743374036"}>
-          <img src="/img/appstore.png" />
-        </Link>
+        
       </div>
     </div>
   );
