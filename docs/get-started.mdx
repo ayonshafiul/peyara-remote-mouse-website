@@ -3,42 +3,34 @@ title: Get Started
 sidebar_position: 1
 ---
 
-import Downloads from "@site/src/components/Downloads.jsx";
+Peyara has two parts: a lightweight **desktop server** (Rust) and the **mobile app**. Both devices need to be on the same Wi-Fi network.
 
-### Download Clients
+- **Server:** [ayonshafiul/peyara-rust-server](https://github.com/ayonshafiul/peyara-rust-server/releases/latest) — Windows, macOS, Linux
+- **App:** [ayonshafiul/peyara-mouse](https://github.com/ayonshafiul/peyara-mouse) — [Google Play](https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara) · [App Store](https://apps.apple.com/us/app/peyara-remote-mouse/id6743374036)
 
-Download both the desktop server and the mobile client
+## 1. Install and run the server
 
-<Downloads />
+Install the server for your OS ([Windows](/docs/Installation/windows) · [macOS](/docs/Installation/mac) · [Linux](/docs/Installation/linux)) and launch it.
 
-### Install
+The server window shows a **QR code** with its network address. Keep it open. On Linux with a Wayland session (e.g. Ubuntu 24), approve the one-time "remote interaction" system prompt so the phone can control the desktop.
 
-Install the desktop server and run
+## 2. Install the mobile app
 
-<img src="/img/run-server.png" alt="run server" width="400" />
+Install the Peyara app on your phone from Google Play, the App Store, or the [GitHub releases](https://github.com/ayonshafiul/peyara-mouse). Connect your phone to the **same Wi-Fi network** as your computer.
 
-### Run the Mobile App
+## 3. Pair with the QR code
 
-Open the mobile app and tap on the Plus Icon. **Make sure your mobile and desktop are connected to the same wifi network**
+Open the app, tap the **Plus (+)** button to add a server, and scan the QR code shown on the desktop window. The app verifies the code and saves the server — you only do this once.
 
-<img src="/img/home.png" alt="Home Screen" width="300" />
+## 4. Connect and control
 
-### Scan QRCode
+Tap the saved server in the app list and press **Connect**. You can now:
 
-Scan the QRCode displayed on the desktop client
+- Move the cursor, click, right-click, drag, and scroll from the touchpad
+- Type with your phone keyboard, including special and media keys
+- Use play, pause, volume, and track controls
+- Send text to the PC clipboard or pull text back to the phone
 
-<img src="/img/scan-qr.png" alt="QRCode scan" width="300" />
+To switch computers later, add another server the same way and tap to switch.
 
-### Connect To Server
-
-Tap on the server and press connect
-
-<img src="/img/home.png" alt="Connect Server" width="300" />
-
-### Take control
-
-Control your mouse and keyboard from mobile!
-
-<img src="/img/touchpad.png" alt="touchpad" width="300" />
-
-If you face any issues connecting take a look at the [Troubleshooting](/docs/troubleshooting) section
+If anything fails, see [Troubleshooting](/docs/troubleshooting).

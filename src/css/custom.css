@@ -1,40 +1,96 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Peyara — clean, flat theme
  */
 
-/* You can override the default Infima variables here. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap");
+
 :root {
-  --ifm-color-primary: #ffeb3b; /* Base color */
-  --ifm-color-primary-dark: #c9b70b; /* Adjusted color */
-  --ifm-color-primary-darker: #b3a200; /* Adjusted color */
-  --ifm-color-primary-darkest: #998400; /* Adjusted color */
-  --ifm-color-primary-light: #fffb70; /* Adjusted color */
-  --ifm-color-primary-lighter: #fffdb0; /* Adjusted color */
-  --ifm-color-primary-lightest: #ffffcd; /* Adjusted color */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 1);
-  --ifm-breadcrumb-color-active: black;
-  --ifm-menu-color-active: black;
-  --ifm-link-color: black;
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
+
+  --peyara-50: #fefce8;
+  --peyara-100: #fef9c3;
+  --peyara-400: #facc15;
+  --peyara-500: #eab308;
+  --peyara-600: #ca8a04;
+  --peyara-700: #a16207;
+
+  --ifm-color-primary: #ca8a04;
+  --ifm-color-primary-dark: #a16207;
+  --ifm-color-primary-darker: #854d0e;
+  --ifm-color-primary-darkest: #713f12;
+  --ifm-color-primary-light: #eab308;
+  --ifm-color-primary-lighter: #facc15;
+  --ifm-color-primary-lightest: #fde047;
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(234, 179, 8, 0.12);
+  --ifm-link-color: #a16207;
+  --ifm-menu-color-active: #a16207;
+  --ifm-breadcrumb-color-active: #a16207;
+  --ifm-navbar-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+  --ifm-global-radius: 14px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #ffeb3b; /* Base color */
-  --ifm-color-primary-dark: #c9b70b; /* Adjusted color */
-  --ifm-color-primary-darker: #b3a200; /* Adjusted color */
-  --ifm-color-primary-darkest: #998400; /* Adjusted color */
-  --ifm-color-primary-light: #fffb70; /* Adjusted color */
-  --ifm-color-primary-lighter: #fffdb0; /* Adjusted color */
-  --ifm-color-primary-lightest: #ffffcd; /* Adjusted color */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-breadcrumb-color-active: #ffeb3b;
-  --ifm-link-color: #ffeb3b;
-  --ifm-menu-color-active: #ffeb3b;
+  --ifm-color-primary: #facc15;
+  --ifm-color-primary-dark: #eab308;
+  --ifm-color-primary-darker: #ca8a04;
+  --ifm-color-primary-darkest: #a16207;
+  --ifm-color-primary-light: #fde047;
+  --ifm-color-primary-lighter: #fef08a;
+  --ifm-color-primary-lightest: #fef9c3;
+  --docusaurus-highlighted-code-line-bg: rgba(250, 204, 21, 0.12);
+  --ifm-link-color: #facc15;
+  --ifm-menu-color-active: #facc15;
+  --ifm-breadcrumb-color-active: #facc15;
+  --ifm-background-color: #06090f;
+  --ifm-navbar-background-color: rgba(6, 9, 15, 0.82);
+  --ifm-footer-background-color: #06090f;
 }
 
+/* ---------- navbar ---------- */
+.navbar-download-btn {
+  background: #eab308;
+  color: #1c1500 !important;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 14px !important;
+  margin-left: 8px;
+}
+.navbar-download-btn:hover {
+  background: #ca8a04;
+  color: #1c1500 !important;
+}
+
+/* ---------- buttons ---------- */
+.button--primary-cta {
+  background: #eab308;
+  color: #1c1500;
+  border: 1px solid #eab308;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+.button--primary-cta:hover {
+  background: #ca8a04;
+  border-color: #ca8a04;
+  color: #1c1500;
+}
+.button--ghost-cta {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: inherit;
+  background: transparent;
+}
+.button--ghost-cta:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* ---------- legacy class cleanup (kept for docs pages) ---------- */
 .download-btn-container {
   display: flex;
   justify-content: center;
@@ -45,111 +101,33 @@
   margin: 1em;
 }
 
-.download-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  background-color: var(--docusaurus-highlighted-code-line-bg);
-  color: white;
-  padding: 0.5em;
-  border-radius: 0.5em;
+/* ---------- docs polish ---------- */
+.markdown img {
+  border-radius: 8px;
+  border: 1px solid var(--ifm-toc-border-color);
 }
-
-.download-btn-small {
-  background-color: var(--docusaurus-highlighted-code-line-bg);
-  color: white;
-  padding: 10px;
-  border-radius: 0.5em;
+.markdown h1, .markdown h2 {
+  letter-spacing: -0.02em;
 }
-
-.download-btn:hover {
-  color: white;
-}
-
-.client-image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1em;
-}
-
-.version-text {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.client-image {
-  width: 150px;
-  height: 150px;
-}
-
-.disabled {
-  opacity: 0.5;
-}
-
-.feature-text {
-  font-weight: bold;
-  text-align: center;
-}
-
-.feature-wrapper {
-  margin-bottom: 300px;
-}
-.feature-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  max-width: 768px;
-  margin: 20px auto;
-}
-
-@media (max-width: 768px) {
-  .feature-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px auto;
-  }
-}
-
-.feature-item {
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-.feature-img {
-  width: 300px;
-}
-
-@keyframes scale-a-lil {
-  from {
-    transform: translateY(-20%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes move-a-lil {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(2%);
-  }
-}
-
 .table-of-contents__link:hover,
 .table-of-contents__link:hover code,
 .table-of-contents__link--active,
 .table-of-contents__link--active code {
   color: var(--ifm-color-primary-darker);
   text-decoration: none;
+}
+[data-theme="dark"] .table-of-contents__link:hover,
+[data-theme="dark"] .table-of-contents__link--active {
+  color: var(--ifm-color-primary-light);
+}
+
+/* ---------- footer ---------- */
+.footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+.footer__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
 }

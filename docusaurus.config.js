@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Peyara Remote Mouse",
   tagline:
-    "Turn your mobile into a wireless mouse and keyboard combo with Peyara Remote Mouse.",
+    "Turn your phone into a fast, private wireless mouse, keyboard & media remote. Tiny ~5 MB open-source server, no ads.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -21,6 +21,51 @@ const config = {
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        name: "theme-color",
+        content: "#eab308",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:type",
+        content: "website",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:site_name",
+        content: "Peyara Remote Mouse",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "author",
+        content: "Peyara",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "canonical",
+        href: "https://peyara-remote-mouse.vercel.app/",
+      },
+    },
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -67,8 +112,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/social-banner.png",
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: true,
+      },
       navbar: {
-        title: "Peyara Remote Mouse",
+        title: "Peyara",
         logo: {
           alt: "Peyara Remote Mouse",
           src: "img/logo.png",
@@ -83,14 +132,20 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/ayonshafiul/peyara-mouse-server",
-            label: "GitHub Server",
+            href: "https://github.com/ayonshafiul/peyara-rust-server",
+            label: "Server",
             position: "right",
           },
           {
-            href: "https://github.com/ayonshafiul/peyara-mouse-client",
-            label: "GitHub Client",
+            href: "https://github.com/ayonshafiul/peyara-mouse",
+            label: "App",
             position: "right",
+          },
+          {
+            href: "https://github.com/ayonshafiul/peyara-rust-server/releases",
+            label: "Download",
+            position: "right",
+            className: "navbar-download-btn",
           },
         ],
       },
@@ -98,7 +153,39 @@ const config = {
         {
           name: "keywords",
           content:
-            "remote mouse, remote keyboard, wifi mouse, wifi keybaord, media controls, android remote mouse",
+            "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
+        },
+        {
+          name: "description",
+          content:
+            "Peyara Remote Mouse turns your phone into a wireless mouse, keyboard and media remote. Tiny ~5 MB open-source Rust server for Windows, macOS and Linux. Pair by QR over Wi-Fi. No ads, no tracking, no account.",
+        },
+        {
+          property: "og:title",
+          content: "Peyara Remote Mouse — Your Phone Is Your Mouse",
+        },
+        {
+          property: "og:description",
+          content:
+            "Wireless mouse, keyboard, media and clipboard control from your phone. Tiny ~5 MB open-source server, QR pairing over Wi-Fi, no ads.",
+        },
+        {
+          property: "og:image",
+          content:
+            "https://peyara-remote-mouse.vercel.app/img/social-banner.png",
+        },
+        {
+          name: "twitter:title",
+          content: "Peyara Remote Mouse — Your Phone Is Your Mouse",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Wireless mouse, keyboard, media and clipboard control from your phone. Tiny ~5 MB open-source server, QR pairing over Wi-Fi, no ads.",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
         },
         {
           name: "google-site-verification",
@@ -113,33 +200,66 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Product",
             items: [
               {
-                label: "Docs",
+                label: "Get Started",
                 to: "/docs/get-started",
               },
-            ],
-          },
-          {
-            title: "More",
-            items: [
+              {
+                label: "Troubleshooting",
+                to: "/docs/troubleshooting",
+              },
               {
                 label: "Blog",
                 to: "/blog",
               },
+            ],
+          },
+          {
+            title: "Download",
+            items: [
               {
-                label: "Server Source",
-                href: "https://github.com/ayonshafiul/peyara-mouse-server",
+                label: "Desktop Server (Rust)",
+                href: "https://github.com/ayonshafiul/peyara-rust-server/releases",
               },
               {
-                label: "Client Source",
-                href: "https://github.com/ayonshafiul/peyara-mouse-client",
+                label: "Mobile App",
+                href: "https://github.com/ayonshafiul/peyara-mouse",
+              },
+              {
+                label: "Windows Setup",
+                to: "/docs/Installation/windows",
+              },
+              {
+                label: "macOS Setup",
+                to: "/docs/Installation/mac",
+              },
+              {
+                label: "Linux Setup",
+                to: "/docs/Installation/linux",
+              },
+            ],
+          },
+          {
+            title: "Open Source",
+            items: [
+              {
+                label: "Rust Server Source",
+                href: "https://github.com/ayonshafiul/peyara-rust-server",
+              },
+              {
+                label: "Mobile Client Source",
+                href: "https://github.com/ayonshafiul/peyara-mouse",
+              },
+              {
+                label: "Privacy Policy",
+                to: "/docs/privacypolicy",
               },
             ],
           },
         ],
-        copyright: `Made with ❤️ in Bangladesh. Site Built with Docusaurus.`,
+        copyright: `Made with ❤️ in Bangladesh · Peyara is free, open source & ad-free.`,
       },
       prism: {
         theme: prismThemes.github,

@@ -1,104 +1,49 @@
 import React from "react";
+import styles from "../pages/index.module.css";
 
 const FEATURES = [
   {
-    title: "Connectivity Features",
-    features: [
-      "Connect using WIFI",
-      "Easy and effortless QRCode scanning",
-      "Automatic server detection",
-      "Fast device switching",
-    ],
-    image: "/img/home.png",
+    title: "Instant Wi-Fi Connect",
+    text: "Scan a QR code once. Peyara auto-discovers your PC on the same network and reconnects in seconds.",
   },
   {
-    title: "Screen Share",
-    features: ["Share Scereen with one tap"],
-    image: "/img/screen-desk.png",
+    title: "Precision Touchpad",
+    text: "Single tap, double tap, two-finger scroll, two-finger right-click and three-finger drag.",
   },
   {
-    title: "Control From Mobile",
-    features: ["Control Desktop From mobile"],
-    image: "/img/screen-mob.png",
-  },
-
-  {
-    title: "Touchpad Features",
-    features: [
-      "Single Tap",
-      "Double Tap",
-      "Right Click on Two Finger Tap",
-      "Two Finger Scroll gesture",
-      "Three Finger pan gesture to move",
-    ],
-    image: "/img/touchpad-2.png",
+    title: "Full Keyboard",
+    text: "Type from your phone with your own mobile keyboard. Enter, backspace and capitals supported.",
   },
   {
-    title: "File Share",
-    features: [
-      "Share Images, Videos and Documents from your phone to your PC wirelessly",
-      "Ability to share multiple files",
-      "Lossless file sharing",
-    ],
-    image: "/img/files.png",
+    title: "Media Remote",
+    text: "Play, pause, skip tracks and change volume from the couch. Good for movies and presentations.",
   },
   {
-    title: "Keyboard Features",
-    features: [
-      "Input text using mobile keyboard",
-      "Capital and lowercase letters supported",
-      "Enter and Backspace key supported",
-      "(Advanced keys coming soon)",
-    ],
-    image: "/img/keyboard.png",
+    title: "Clipboard Sync",
+    text: "Send links, notes and snippets from phone to PC, or pull text back, and paste instantly.",
   },
   {
-    title: "Clipboard Features",
-    features: [
-      "Send Urls, text messages, notes from mobile to pc",
-      "Share text from pc to mobile",
-      "Instant copy to clipboard with a single click.",
-    ],
-    image: "/img/touchpad.png",
-  },
-  {
-    title: "Media Features",
-    features: [
-      "Control media volume",
-      "Play, pause, stop, skip to the previous or next track",
-    ],
-    image: "/img/touchpad.png",
-  },
-  {
-    title: "Open Source and Zero Ads",
-    features: [
-      "Peyara Remote Mouse and Keyboard is free and open source",
-      "Enjoy an ad-free experience.",
-    ],
+    title: "Private and Open Source",
+    text: "Local-only Wi-Fi traffic, no ads, no tracking. Server and app are free and open on GitHub.",
   },
 ];
 
 export default function Features() {
   return (
-    <div className="feature-wrapper">
-      <h1 className="feature-text">Features</h1>
-      {FEATURES.map((feature, idx) => {
-        return (
-          <div className="feature-container" key={idx}>
-            <div>
-              <h1>{feature.title}</h1>
-              <ul>
-                {feature.features.map((feat) => {
-                  return <li className="feature-item">{feat}</li>;
-                })}
-              </ul>
-            </div>
-            {feature.image && (
-              <img className="feature-img" src={feature.image} />
-            )}
+    <section className={styles.section}>
+      <div className={styles.eyebrow}>Features</div>
+      <h2 className={styles.sectionTitle}>Everything a remote needs.</h2>
+      <p className={styles.sectionSub}>
+        Mouse, keyboard, media and clipboard over your local network.
+      </p>
+      <div className={styles.cardGrid}>
+        {FEATURES.map((f) => (
+          <div key={f.title} className={styles.card}>
+            <h3>{f.title}</h3>
+            <p>{f.text}</p>
           </div>
-        );
-      })}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }

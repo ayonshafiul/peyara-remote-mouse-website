@@ -3,46 +3,22 @@ title: Installation for Windows
 sidebar_position: 1
 ---
 
-**[↓ <u>Click here to download for Windows (.exe) v1.0.1 </u>](https://github.com/ayonshafiul/peyara-mouse-server/releases/download/v1.0.1/PeyaraRemoteMouseServer-1.0.1.Setup.exe)**
+Download the latest release from the [**Releases** page](https://github.com/ayonshafiul/peyara-rust-server/releases). Look for the file named `Peyara-Server-<version>-windows-x86_64-setup.exe`.
 
-[↓ <u>Click to download older versions </u>](https://github.com/ayonshafiul/peyara-mouse-server/releases)
+[See all versions](https://github.com/ayonshafiul/peyara-rust-server/releases)
 
-If this is the first time you are using this app follow **[<u>Installation Instructions</u>](/docs/Installation/windows#installation-instructions)**.
+## Installation
 
-If you are updating this app follow **[<u>Update Instructions</u>](/docs/Installation/windows#update-instructions)**
+1. Run the downloaded `.exe` installer and follow the wizard.
+2. Windows SmartScreen may warn on first launch because community builds are not commercially signed. This is expected — click "More info" then "Run anyway".
+3. When Windows Firewall asks, allow the app on **private networks** so your phone can reach it over Wi-Fi.
+4. Start Peyara Server. It shows a QR code — scan it with the mobile app while both devices are on the same Wi-Fi.
 
-## Update Instructions
+## Updating
 
-### Open Downloaded File
+Download the new `.exe` from the Releases page and run it. Your pairing is kept; just re-scan the QR code if needed.
 
-Double click to open the update file
+## Troubleshooting
 
-![Open From File Explorer](/img/windows/wss4.png)
-
-### Allow Firewall access
-
-![Firewall Access](/img/windows/wss3.png)
-
-## Installation Instructions
-
-### Open File for Installation
-
-Double click to open the downloaded file
-
-![Open From File Explorer](/img/windows/wss4.png)
-
-### Select More Info
-
-**This warning is shown as the build executable is not signed**. Rest assured, It is safe to use. So, you can go ahead and Click on More info.
-
-![More Info](/img/windows/wss1.png)
-
-### Select Run Anyway
-
-Click on Run Anyway.
-
-![Run Anyway](/img/windows/wss2.png)
-
-### Allow Firewall access
-
-![Firewal Access](/img/windows/wss3.png)
+- Phone cannot find the PC: make sure both are on the same Wi-Fi and the firewall allows Peyara on private networks.
+- Still blocked: check the in-app log panel for the detected network addresses.

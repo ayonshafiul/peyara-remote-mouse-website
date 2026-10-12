@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peyara-remote-mouse.vercel.app/sitemap.xml
