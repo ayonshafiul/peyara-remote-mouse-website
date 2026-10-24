@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "@docusaurus/Link";
 import styles from "../pages/index.module.css";
 
 const SERVER_REPO = "https://github.com/ayonshafiul/peyara-rust-server";
@@ -11,14 +12,16 @@ export default function Downloads() {
       <h2 className={styles.sectionTitle}>Set up in under a minute.</h2>
       <p className={styles.sectionSub}>
         Install the lightweight Rust server on your computer, grab the mobile
-        app, and pair with a QR code.
+        app, pair with a QR code — then open the Deck and start firing
+        shortcuts.
       </p>
       <div className={styles.dlGrid}>
         <div className={styles.dlCard}>
           <h3>Desktop Server</h3>
           <p>
             Tiny (~5 MB) native Rust server for Windows, macOS and Linux.
-            Runs quietly in the background.
+            Handles the mouse, keyboard, media, clipboard and the app-focused
+            Deck — all on your local network.
           </p>
           <div className={styles.dlBtns}>
             <a
@@ -42,14 +45,14 @@ export default function Downloads() {
           </div>
         </div>
         <div className={styles.dlCard}>
-          <h3>Mobile App</h3>
+          <h3>Mobile App + Deck</h3>
           <p>
-            Touchpad, keyboard, media and clipboard controls for Android and
-            iOS.
+            Touchpad, keyboard, media, clipboard and the free Stream Deck for
+            Android and iOS. Hundreds of presets included.
           </p>
           <div className={styles.dlBtns}>
             <a
-              className={`${styles.dlBtn} ${styles.dlBtnPrimary}`}
+              className={`${styles.dlBtn} ${styles.dlBtnTeal}`}
               href="https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara"
             >
               Google Play
@@ -65,6 +68,8 @@ export default function Downloads() {
             </a>
           </div>
           <div className={styles.dlNote}>
+            Deck guide: <Link to="/docs/stream-deck">how the Deck works</Link>
+            {" · "}
             Source: <a href={CLIENT_REPO}>ayonshafiul/peyara-mouse</a>
           </div>
         </div>

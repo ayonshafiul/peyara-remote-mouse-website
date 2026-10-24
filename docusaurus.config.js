@@ -10,13 +10,12 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Peyara Remote Mouse",
   tagline:
-    "Turn your phone into a fast, private wireless mouse, keyboard & media remote. Tiny ~5 MB open-source server, no ads.",
+    "Wireless mouse, keyboard and media remote for your PC — plus a free Stream Deck that follows the app in focus. Tiny ~5 MB open-source server, no ads.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
   url: "https://peyara-remote-mouse.vercel.app",
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   onBrokenLinks: "warn",
@@ -27,7 +26,7 @@ const config = {
       tagName: "meta",
       attributes: {
         name: "theme-color",
-        content: "#eab308",
+        content: "#facc15",
       },
     },
     {
@@ -116,6 +115,14 @@ const config = {
         defaultMode: "dark",
         respectPrefersColorScheme: true,
       },
+      announcementBar: {
+        id: "deck-launch",
+        content:
+          'New: a free Stream Deck for your PC is here — hundreds of app presets. <a href="/docs/stream-deck">See how it works →</a>',
+        backgroundColor: "#0b1220",
+        textColor: "#f8fafc",
+        isCloseable: true,
+      },
       navbar: {
         title: "Peyara",
         logo: {
@@ -129,6 +136,11 @@ const config = {
             position: "left",
             label: "Docs",
             to: "/docs/get-started",
+          },
+          {
+            to: "/docs/stream-deck",
+            label: "Stream Deck",
+            position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
@@ -153,21 +165,22 @@ const config = {
         {
           name: "keywords",
           content:
-            "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
+            "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, phone stream deck, free stream deck, mobile stream deck, mobile macro pad, app shortcut presets, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
         },
         {
           name: "description",
           content:
-            "Peyara Remote Mouse turns your phone into a wireless mouse, keyboard and media remote. Tiny ~5 MB open-source Rust server for Windows, macOS and Linux. Pair by QR over Wi-Fi. No ads, no tracking, no account.",
+            "Peyara turns your phone into a wireless mouse, keyboard and media remote — plus a free Stream Deck that follows the desktop app in focus. Tiny ~5 MB open-source Rust server for Windows, macOS and Linux. Pair by QR over Wi-Fi. No ads, no tracking, no account.",
         },
         {
           property: "og:title",
-          content: "Peyara Remote Mouse — Your Phone Is Your Mouse",
+          content:
+            "Peyara Remote Mouse — Wireless Mouse & Free Stream Deck",
         },
         {
           property: "og:description",
           content:
-            "Wireless mouse, keyboard, media and clipboard control from your phone. Tiny ~5 MB open-source server, QR pairing over Wi-Fi, no ads.",
+            "Wireless mouse, keyboard, media and clipboard control from your phone, plus a free Stream Deck with hundreds of app presets. Tiny open-source server, QR pairing over Wi-Fi, no ads.",
         },
         {
           property: "og:image",
@@ -176,12 +189,13 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: "Peyara Remote Mouse — Your Phone Is Your Mouse",
+          content:
+            "Peyara Remote Mouse — Wireless Mouse & Free Stream Deck",
         },
         {
           name: "twitter:description",
           content:
-            "Wireless mouse, keyboard, media and clipboard control from your phone. Tiny ~5 MB open-source server, QR pairing over Wi-Fi, no ads.",
+            "Control your PC from your phone and fire app shortcuts from a free, focus-aware Stream Deck. Open source, local-only and ad-free.",
         },
         {
           name: "robots",
@@ -207,6 +221,10 @@ const config = {
                 to: "/docs/get-started",
               },
               {
+                label: "Stream Deck Guide",
+                to: "/docs/stream-deck",
+              },
+              {
                 label: "Troubleshooting",
                 to: "/docs/troubleshooting",
               },
@@ -226,6 +244,10 @@ const config = {
               {
                 label: "Mobile App",
                 href: "https://github.com/ayonshafiul/peyara-mouse",
+              },
+              {
+                label: "Deck Presets",
+                href: "https://github.com/ayonshafiul/peyara-actions",
               },
               {
                 label: "Windows Setup",
@@ -251,6 +273,10 @@ const config = {
               {
                 label: "Mobile Client Source",
                 href: "https://github.com/ayonshafiul/peyara-mouse",
+              },
+              {
+                label: "Preset Library",
+                href: "https://github.com/ayonshafiul/peyara-actions",
               },
               {
                 label: "Privacy Policy",

@@ -23,6 +23,10 @@ Enter your Mac password when prompted. Then launch Peyara from Applications. (Al
 
 Note: screen sharing is intentionally not part of Peyara, so no screen-recording permission is needed.
 
+## Open the Deck
+
+Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Stream Deck guide](/docs/stream-deck).
+
 ## Updating
 
 1. Before installing a newer version, remove the old Accessibility permission (System Settings → Privacy & Security → Accessibility, select Peyara and press `-`). This ensures macOS picks up the new build cleanly.

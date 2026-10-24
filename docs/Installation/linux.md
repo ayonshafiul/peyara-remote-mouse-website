@@ -36,6 +36,10 @@ On GNOME / Wayland, input goes through the Remote Desktop portal:
 
 Requirements (`xdg-desktop-portal` and `xdg-desktop-portal-gnome`) are preinstalled on stock Ubuntu 24. If you deny the prompt or it never appears, relaunch the app and check the in-app Log panel. As a fallback, pick "Ubuntu on Xorg" at the login screen, where plain X11 injection works.
 
+## Open the Deck
+
+Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Stream Deck guide](/docs/stream-deck).
+
 ## Updating
 
 Install the new package the same way as above. Your pairing is kept; just re-scan the QR code if needed.

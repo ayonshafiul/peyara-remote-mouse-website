@@ -1,41 +1,38 @@
-# Website
+# Peyara Remote Mouse — website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The marketing site and documentation for [Peyara Remote Mouse](https://peyara-remote-mouse.vercel.app), a wireless mouse, keyboard and media remote for your PC — plus a free Stream Deck that follows the focused desktop app.
 
-### Installation
+Built with [Docusaurus](https://docusaurus.io/).
 
-```
-$ yarn
-```
+## Local development
 
-### Local Development
-
-```
-$ yarn start
+```sh
+yarn install
+yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Most changes are reflected live without restarting the dev server.
 
-### Build
+## Build
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```sh
+yarn build
+yarn serve
 ```
 
-Not using SSH:
+The static site is generated into `build/` and can be deployed to any static host.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+## Content map
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- `src/pages/index.js` — homepage (hero, Stream Deck feature, features, FAQ, downloads)
+- `src/components/DeckMock.jsx` — CSS mock of the in-app Deck
+- `docs/get-started.mdx` — setup, pairing and first connection
+- `docs/stream-deck.mdx` — Stream Deck guide
+- `docs/Installation/` — per-OS server installation
+- `blog/` — release notes and announcements
+
+## Related repositories
+
+- [peyara-rust-server](https://github.com/ayonshafiul/peyara-rust-server) — desktop server
+- [peyara-mouse](https://github.com/ayonshafiul/peyara-mouse) — mobile app
+- [peyara-actions](https://github.com/ayonshafiul/peyara-actions) — open Deck presets

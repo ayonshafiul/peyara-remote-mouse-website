@@ -1,12 +1,21 @@
 /**
- * Peyara — clean, flat theme
+ * Peyara — brand refresh: guava yellow, mint accent, ink
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap");
 
 :root {
-  --ifm-font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
   --ifm-font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
+  --peyara-font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  /* brand */
+  --peyara-yellow: #fde047;
+  --peyara-yellow-deep: #eab308;
+  --peyara-teal: #2dd4bf;
+  --peyara-teal-deep: #0d9488;
+  --peyara-ink: #0b1220;
 
   --peyara-50: #fefce8;
   --peyara-100: #fef9c3;
@@ -28,7 +37,7 @@
   --ifm-menu-color-active: #a16207;
   --ifm-breadcrumb-color-active: #a16207;
   --ifm-navbar-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
-  --ifm-global-radius: 14px;
+  --ifm-global-radius: 12px;
 }
 
 [data-theme="dark"] {
@@ -44,13 +53,37 @@
   --ifm-menu-color-active: #facc15;
   --ifm-breadcrumb-color-active: #facc15;
   --ifm-background-color: #06090f;
+  --ifm-background-surface-color: #0b111c;
   --ifm-navbar-background-color: rgba(6, 9, 15, 0.82);
   --ifm-footer-background-color: #06090f;
+  --ifm-toc-border-color: #1e2937;
+}
+
+/* ---------- announcements ---------- */
+[class*="announcementBar"] {
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+[class*="announcementBar"] a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ---------- navbar ---------- */
+.navbar__title {
+  font-family: var(--peyara-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar__logo img {
+  border-radius: 50%;
+}
+
 .navbar-download-btn {
-  background: #eab308;
+  background: var(--peyara-yellow);
   color: #1c1500 !important;
   font-weight: 700;
   border-radius: 8px;
@@ -58,56 +91,53 @@
   margin-left: 8px;
 }
 .navbar-download-btn:hover {
-  background: #ca8a04;
+  background: var(--peyara-yellow-deep);
   color: #1c1500 !important;
 }
 
 /* ---------- buttons ---------- */
 .button--primary-cta {
-  background: #eab308;
+  background: var(--peyara-yellow);
   color: #1c1500;
-  border: 1px solid #eab308;
+  border: 1px solid var(--peyara-yellow);
   font-weight: 700;
-  border-radius: 8px;
+  border-radius: 9px;
   padding: 12px 24px;
+  box-shadow: 0 8px 20px rgba(234, 179, 8, 0.18);
 }
 .button--primary-cta:hover {
-  background: #ca8a04;
-  border-color: #ca8a04;
+  background: var(--peyara-yellow-deep);
+  border-color: var(--peyara-yellow-deep);
   color: #1c1500;
+  text-decoration: none;
 }
 .button--ghost-cta {
   border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 8px;
+  border-radius: 9px;
   padding: 12px 24px;
   font-weight: 600;
   color: inherit;
   background: transparent;
 }
 .button--ghost-cta:hover {
-  border-color: var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
+  border-color: var(--peyara-teal);
+  color: inherit;
   text-decoration: none;
 }
 
-/* ---------- legacy class cleanup (kept for docs pages) ---------- */
-.download-btn-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
-  margin: 1em;
-}
-
-/* ---------- docs polish ---------- */
+/* ---------- docs ---------- */
 .markdown img {
   border-radius: 8px;
   border: 1px solid var(--ifm-toc-border-color);
 }
-.markdown h1, .markdown h2 {
-  letter-spacing: -0.02em;
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  font-family: var(--peyara-font-display);
+  letter-spacing: -0.025em;
+}
+.markdown h2 {
+  --ifm-h2-vertical-rhythm-top: 3;
 }
 .table-of-contents__link:hover,
 .table-of-contents__link:hover code,
@@ -121,13 +151,35 @@
   color: var(--ifm-color-primary-light);
 }
 
+/* docs cards / admonitions get a touch of mint */
+.alert--info {
+  --ifm-alert-background-color: rgba(45, 212, 191, 0.08);
+  --ifm-alert-border-color: rgba(45, 212, 191, 0.45);
+}
+
+/* ---------- legacy class cleanup (kept for docs pages) ---------- */
+.download-btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
 /* ---------- footer ---------- */
 .footer {
   border-top: 1px solid rgba(148, 163, 184, 0.15);
 }
 .footer__title {
+  font-family: var(--peyara-font-display);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+.footer__copyright {
+  font-size: 0.8rem;
   opacity: 0.7;
 }

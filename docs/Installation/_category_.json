@@ -1,8 +1,8 @@
 {
   "label": "Installation",
-  "position": 2,
+  "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Installation instructions"
+    "description": "Install the Peyara desktop server on Windows, macOS or Linux."
   }
 }

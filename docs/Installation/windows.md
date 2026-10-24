@@ -14,6 +14,10 @@ Download the latest release from the [**Releases** page](https://github.com/ayon
 3. When Windows Firewall asks, allow the app on **private networks** so your phone can reach it over Wi-Fi.
 4. Start Peyara Server. It shows a QR code — scan it with the mobile app while both devices are on the same Wi-Fi.
 
+## Open the Deck
+
+Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Stream Deck guide](/docs/stream-deck).
+
 ## Updating
 
 Download the new `.exe` from the Releases page and run it. Your pairing is kept; just re-scan the QR code if needed.
