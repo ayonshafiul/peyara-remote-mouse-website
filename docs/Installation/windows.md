@@ -16,7 +16,7 @@ Download the latest release from the [**Releases** page](https://github.com/ayon
 
 ## Open the Deck
 
-Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Stream Deck guide](/docs/stream-deck).
+Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Deck guide](/docs/deck).
 
 ## Updating
 

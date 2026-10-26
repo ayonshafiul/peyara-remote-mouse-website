@@ -1,8 +1,13 @@
 /**
- * Peyara — brand refresh: guava yellow, mint accent, ink
+ * Peyara — modern sleek design system
+ * guava yellow + mint accents, Space Grotesk display, hairline borders, glass chrome
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap");
+
+/* ============================================================
+   1. Tokens
+   ============================================================ */
 
 :root {
   --ifm-font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -24,6 +29,14 @@
   --peyara-600: #ca8a04;
   --peyara-700: #a16207;
 
+  /* surfaces */
+  --peyara-page: #f8f9fb;
+  --peyara-surface: #ffffff;
+  --peyara-border: #e6e8ee;
+  --peyara-text-muted: #5b6472;
+  --peyara-glass: rgba(255, 255, 255, 0.78);
+  --peyara-card-hover-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+
   --ifm-color-primary: #ca8a04;
   --ifm-color-primary-dark: #a16207;
   --ifm-color-primary-darker: #854d0e;
@@ -36,8 +49,11 @@
   --ifm-link-color: #a16207;
   --ifm-menu-color-active: #a16207;
   --ifm-breadcrumb-color-active: #a16207;
-  --ifm-navbar-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+  --ifm-navbar-shadow: none;
   --ifm-global-radius: 12px;
+  --ifm-background-color: var(--peyara-page);
+  --ifm-background-surface-color: var(--peyara-surface);
+  --ifm-toc-border-color: var(--peyara-border);
 }
 
 [data-theme="dark"] {
@@ -52,17 +68,79 @@
   --ifm-link-color: #facc15;
   --ifm-menu-color-active: #facc15;
   --ifm-breadcrumb-color-active: #facc15;
-  --ifm-background-color: #06090f;
-  --ifm-background-surface-color: #0b111c;
-  --ifm-navbar-background-color: rgba(6, 9, 15, 0.82);
-  --ifm-footer-background-color: #06090f;
-  --ifm-toc-border-color: #1e2937;
+
+  --peyara-page: #06090f;
+  --peyara-surface: #0b111c;
+  --peyara-border: #1c2534;
+  --peyara-text-muted: #8b95a7;
+  --peyara-glass: rgba(6, 9, 15, 0.72);
+  --peyara-card-hover-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+  --ifm-background-color: var(--peyara-page);
+  --ifm-background-surface-color: var(--peyara-surface);
+  --ifm-navbar-background-color: var(--peyara-glass);
+  --ifm-footer-background-color: var(--peyara-page);
+  --ifm-toc-border-color: var(--peyara-border);
 }
 
-/* ---------- announcements ---------- */
+/* ============================================================
+   2. Global chrome
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--peyara-yellow);
+  color: #1c1500;
+}
+
+/* slim scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c9ced9 transparent;
+}
+[data-theme="dark"] * {
+  scrollbar-color: #263148 transparent;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9ced9;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #263148;
+  background-clip: content-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   3. Announcement bar
+   ============================================================ */
+
 [class*="announcementBar"] {
   font-size: 0.82rem;
   font-weight: 500;
+  border-bottom: 1px solid var(--peyara-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+[class*="announcementBar"] [class*="close"] {
+  opacity: 0.6;
 }
 [class*="announcementBar"] a {
   color: inherit;
@@ -70,32 +148,111 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+[class*="announcementBar"] a:hover {
+  opacity: 0.85;
+}
 
-/* ---------- navbar ---------- */
+/* ============================================================
+   4. Navbar — glass, hairline, pill hovers
+   ============================================================ */
+
+.navbar {
+  backdrop-filter: saturate(170%) blur(14px);
+  -webkit-backdrop-filter: saturate(170%) blur(14px);
+  background: var(--peyara-glass);
+  border-bottom: 1px solid var(--peyara-border);
+  padding: 0.4rem 0;
+}
+
 .navbar__title {
   font-family: var(--peyara-font-display);
   font-weight: 700;
+  font-size: 1.16rem;
   letter-spacing: -0.02em;
+}
+
+.navbar__brand:hover {
+  text-decoration: none;
 }
 
 .navbar__logo img {
   border-radius: 50%;
 }
 
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--ifm-font-color-base);
+  opacity: 0.78;
+  border-radius: 8px;
+  padding: 6px 10px !important;
+  transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.navbar__link:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.navbar__link--active,
+.navbar__link--active:hover {
+  opacity: 1;
+  color: var(--ifm-color-primary);
+  background: rgba(250, 204, 21, 0.09);
+}
+
+.navbar__item > .dropdown__link:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+
 .navbar-download-btn {
   background: var(--peyara-yellow);
   color: #1c1500 !important;
   font-weight: 700;
-  border-radius: 8px;
-  padding: 6px 14px !important;
+  border-radius: 9px;
+  padding: 7px 16px !important;
   margin-left: 8px;
+  opacity: 1;
+  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.22);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 .navbar-download-btn:hover {
   background: var(--peyara-yellow-deep);
   color: #1c1500 !important;
+  transform: translateY(-1px);
 }
 
-/* ---------- buttons ---------- */
+/* mobile drawer */
+.navbar-sidebar {
+  background: var(--peyara-page);
+}
+.navbar-sidebar__brand {
+  border-bottom: 1px solid var(--peyara-border);
+}
+.navbar-sidebar__items {
+  padding-top: 0.75rem;
+}
+.navbar-sidebar .menu__link {
+  border-radius: 9px;
+  padding: 9px 12px;
+  margin: 2px 0;
+}
+.navbar-sidebar .menu__link:hover {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--ifm-font-color-base);
+}
+.navbar-sidebar__backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(2, 6, 23, 0.55);
+}
+
+/* ============================================================
+   5. Buttons
+   ============================================================ */
+
 .button--primary-cta {
   background: var(--peyara-yellow);
   color: #1c1500;
@@ -104,12 +261,14 @@
   border-radius: 9px;
   padding: 12px 24px;
   box-shadow: 0 8px 20px rgba(234, 179, 8, 0.18);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 .button--primary-cta:hover {
   background: var(--peyara-yellow-deep);
   border-color: var(--peyara-yellow-deep);
   color: #1c1500;
   text-decoration: none;
+  transform: translateY(-1px);
 }
 .button--ghost-cta {
   border: 1px solid var(--ifm-toc-border-color);
@@ -118,46 +277,565 @@
   font-weight: 600;
   color: inherit;
   background: transparent;
+  transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .button--ghost-cta:hover {
   border-color: var(--peyara-teal);
   color: inherit;
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
-/* ---------- docs ---------- */
-.markdown img {
-  border-radius: 8px;
-  border: 1px solid var(--ifm-toc-border-color);
+/* ============================================================
+   6. Markdown — typography, code, tables, quotes
+   ============================================================ */
+
+.markdown {
+  line-height: 1.72;
+  font-size: 0.97rem;
 }
+
 .markdown h1,
 .markdown h2,
-.markdown h3 {
+.markdown h3,
+.markdown h4 {
   font-family: var(--peyara-font-display);
   letter-spacing: -0.025em;
+  scroll-margin-top: 5.5rem;
 }
+
+.markdown h1 {
+  font-size: clamp(1.95rem, 3.4vw, 2.45rem);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
 .markdown h2 {
   --ifm-h2-vertical-rhythm-top: 3;
-}
-.table-of-contents__link:hover,
-.table-of-contents__link:hover code,
-.table-of-contents__link--active,
-.table-of-contents__link--active code {
-  color: var(--ifm-color-primary-darker);
-  text-decoration: none;
-}
-[data-theme="dark"] .table-of-contents__link:hover,
-[data-theme="dark"] .table-of-contents__link--active {
-  color: var(--ifm-color-primary-light);
+  font-size: 1.55rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--peyara-border);
 }
 
-/* docs cards / admonitions get a touch of mint */
-.alert--info {
+.markdown h3 {
+  font-size: 1.2rem;
+}
+
+.markdown a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.markdown li + li {
+  margin-top: 0.3rem;
+}
+
+.markdown img {
+  border-radius: 12px;
+  border: 1px solid var(--peyara-border);
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.1);
+}
+
+[data-theme="dark"] .markdown img {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.markdown hr {
+  border: none;
+  height: 1px;
+  background: var(--peyara-border);
+  margin: 2.4rem 0;
+}
+
+/* inline code — pill */
+.markdown code {
+  background: rgba(148, 163, 184, 0.13);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 6px;
+  padding: 1.5px 6px;
+  font-size: 0.86em;
+  color: inherit;
+}
+
+[data-theme="dark"] .markdown code {
+  background: rgba(250, 204, 21, 0.07);
+  border-color: rgba(250, 204, 21, 0.16);
+}
+
+kbd {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--peyara-border);
+  border-bottom-width: 2px;
+  background: var(--peyara-surface);
+  box-shadow: none;
+}
+
+/* code blocks */
+.theme-code-block {
+  border: 1px solid var(--peyara-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.1);
+  margin: 0 0 1.4rem;
+}
+
+[data-theme="dark"] .theme-code-block {
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
+}
+
+.theme-code-block pre {
+  border-radius: inherit;
+  margin: 0;
+}
+
+.theme-code-block pre::-webkit-scrollbar {
+  height: 7px;
+}
+
+/* blockquote */
+.markdown blockquote {
+  border-left: 3px solid var(--peyara-yellow);
+  background: rgba(148, 163, 184, 0.06);
+  border-radius: 0 12px 12px 0;
+  padding: 0.9rem 1.2rem;
+  color: var(--peyara-text-muted);
+}
+
+/* tables */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--peyara-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: table;
+  width: auto;
+  min-width: 50%;
+}
+
+.markdown table th {
+  background: rgba(148, 163, 184, 0.08);
+  font-family: var(--peyara-font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--peyara-text-muted);
+  padding: 11px 16px;
+}
+
+.markdown table td {
+  padding: 11px 16px;
+  border-top: 1px solid var(--peyara-border);
+}
+
+.markdown table tr:hover td {
+  background: rgba(148, 163, 184, 0.05);
+}
+
+/* ============================================================
+   7. Admonitions
+   ============================================================ */
+
+.alert {
+  border-radius: 14px;
+  border-width: 1px;
+  border-left-width: 3px;
+  background: var(--ifm-alert-background-color);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.alert .admonition-heading,
+.alert h5 {
+  font-family: var(--peyara-font-display);
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.alert--info,
+.alert--tip {
   --ifm-alert-background-color: rgba(45, 212, 191, 0.08);
   --ifm-alert-border-color: rgba(45, 212, 191, 0.45);
+  --ifm-alert-color: inherit;
 }
 
-/* ---------- legacy class cleanup (kept for docs pages) ---------- */
+.alert--note,
+.alert--secondary {
+  --ifm-alert-background-color: rgba(148, 163, 184, 0.08);
+  --ifm-alert-border-color: rgba(148, 163, 184, 0.4);
+  --ifm-alert-color: inherit;
+}
+
+.alert--warning,
+.alert--caution {
+  --ifm-alert-background-color: rgba(250, 204, 21, 0.08);
+  --ifm-alert-border-color: rgba(250, 204, 21, 0.45);
+  --ifm-alert-color: inherit;
+}
+
+.alert--danger {
+  --ifm-alert-background-color: rgba(248, 113, 113, 0.08);
+  --ifm-alert-border-color: rgba(248, 113, 113, 0.42);
+  --ifm-alert-color: inherit;
+}
+
+.alert a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   8. Docs sidebar
+   ============================================================ */
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--peyara-border);
+}
+
+.theme-doc-sidebar-container > div {
+  padding: 0.75rem 0.5rem;
+}
+
+.menu__link {
+  border-radius: 8px;
+  margin: 1px 6px;
+  color: var(--ifm-font-color-base);
+  opacity: 0.75;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.menu__link:hover {
+  opacity: 1;
+  color: var(--ifm-font-color-base);
+  background: rgba(148, 163, 184, 0.09);
+  text-decoration: none;
+}
+
+.menu__link--active,
+.menu__link--active:hover,
+.menu__link--active.menu__link--sublist {
+  opacity: 1;
+  color: var(--ifm-color-primary);
+  background: rgba(250, 204, 21, 0.09);
+  box-shadow: inset 2.5px 0 0 var(--peyara-yellow);
+}
+
+.menu__list-item-collapsible:hover .menu__link {
+  background: rgba(148, 163, 184, 0.09);
+}
+
+/* top-level categories: small caps labels */
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link,
+.theme-doc-sidebar-item-category-level-1 > .menu__link {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--peyara-text-muted);
+  opacity: 1;
+  margin-top: 0.65rem;
+}
+
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.menu__caret:before {
+  background: currentColor;
+}
+
+/* ============================================================
+   9. Docs page furniture — breadcrumbs, TOC, pagination
+   ============================================================ */
+
+.breadcrumbs__link {
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--peyara-text-muted);
+}
+
+.breadcrumbs__link:hover {
+  background: rgba(148, 163, 184, 0.09);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--ifm-color-primary);
+  background: rgba(250, 204, 21, 0.07);
+}
+
+.table-of-contents {
+  font-size: 0.8rem;
+  border-left: none;
+}
+
+.table-of-contents__link {
+  color: var(--peyara-text-muted);
+  border-left: 2px solid transparent;
+  margin-left: -12px;
+  padding-left: 10px;
+  line-height: 1.5;
+  display: block;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  border-left-color: var(--peyara-yellow);
+}
+
+.pagination-nav {
+  gap: 12px;
+}
+
+.pagination-nav__link {
+  border: 1px solid var(--peyara-border);
+  border-radius: 14px;
+  padding: 15px 20px;
+  transition: border-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: rgba(250, 204, 21, 0.55);
+  transform: translateY(-2px);
+  box-shadow: var(--peyara-card-hover-shadow);
+  text-decoration: none;
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--peyara-text-muted);
+  margin-bottom: 3px;
+}
+
+.pagination-nav__label {
+  font-family: var(--peyara-font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* docs cards (generated index pages) */
+article .card {
+  border: 1px solid var(--peyara-border);
+  border-radius: 14px;
+  box-shadow: none;
+  height: 100%;
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+article .card:hover {
+  border-color: rgba(250, 204, 21, 0.55);
+  transform: translateY(-2px);
+  box-shadow: var(--peyara-card-hover-shadow);
+  text-decoration: none;
+}
+
+article .card h2 {
+  font-family: var(--peyara-font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ifm-font-color-base);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.35rem;
+}
+
+article .card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--peyara-text-muted);
+  margin: 0;
+}
+
+/* ============================================================
+   10. Blog
+   ============================================================ */
+
+.blog-list-page article {
+  border: 1px solid var(--peyara-border);
+  border-radius: 18px;
+  padding: 1.6rem 1.8rem 1.4rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.blog-list-page article:hover {
+  border-color: rgba(250, 204, 21, 0.5);
+  transform: translateY(-2px);
+  box-shadow: var(--peyara-card-hover-shadow);
+}
+
+.blog-list-page article h2,
+.blog-list-page article h3 {
+  font-family: var(--peyara-font-display);
+  letter-spacing: -0.025em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-list-page article h2 a,
+.blog-list-page article h3 a {
+  color: inherit;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.blog-list-page article h2 a:hover,
+.blog-list-page article h3 a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.blog-list-page article .avatar,
+.blog-post-page header .avatar {
+  align-items: center;
+}
+
+.blog-list-page article .avatar__photo,
+.blog-post-page .avatar__photo {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+/* meta rows (date, author, reading time) */
+.blog-list-page article header div,
+.blog-post-page header div {
+  font-size: 0.8rem;
+  color: var(--peyara-text-muted);
+}
+
+.blog-post-page h1 {
+  font-family: var(--peyara-font-display);
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.blog-post-page header {
+  margin-bottom: 1.6rem;
+}
+
+/* tags */
+.badge {
+  border-radius: 999px;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  background: rgba(250, 204, 21, 0.08);
+  color: var(--ifm-color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  transition: background 0.15s ease;
+}
+
+.badge:hover {
+  background: rgba(250, 204, 21, 0.16);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* ============================================================
+   11. Footer
+   ============================================================ */
+
+.footer {
+  border-top: 1px solid var(--peyara-border);
+  padding: 3.5rem 0 2.25rem;
+}
+
+[data-theme="dark"] .footer {
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 0%, rgba(250, 204, 21, 0.04), transparent 70%),
+    var(--peyara-page);
+}
+
+.footer__title {
+  font-family: var(--peyara-font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--peyara-text-muted);
+  margin-bottom: 1rem;
+}
+
+.footer__link-item {
+  color: var(--ifm-font-color-base);
+  opacity: 0.72;
+  font-size: 0.9rem;
+  line-height: 2.1;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.footer .footer__col {
+  margin-bottom: 0.5rem;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.footer__bottom {
+  margin-top: 2.25rem;
+}
+
+/* ============================================================
+   12. Back to top + misc
+   ============================================================ */
+
+.theme-back-to-top-button {
+  border: 1px solid var(--peyara-border);
+  background: var(--peyara-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.16);
+  transition: border-color 0.15s ease;
+}
+
+.theme-back-to-top-button:hover {
+  border-color: rgba(250, 204, 21, 0.55);
+}
+
+/* legacy container kept for older docs markup */
 .download-btn-container {
   display: flex;
   justify-content: center;
@@ -168,18 +846,9 @@
   margin: 1em;
 }
 
-/* ---------- footer ---------- */
-.footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.15);
-}
-.footer__title {
-  font-family: var(--peyara-font-display);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.7;
-}
-.footer__copyright {
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
+/* ============================================================
+   13. Homepage handoff — keep module-css vars in sync
+   ============================================================ */
+
+/* (homepage styles live in src/pages/index.module.css; these tokens
+   intentionally mirror the design language used there) */

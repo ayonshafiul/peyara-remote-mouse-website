@@ -24,7 +24,7 @@ Everything the App handles stays on your devices and on your local network:
 - Your saved server list and connection details
 - Your Deck layouts and imported presets
 
-## Stream Deck presets
+## Deck presets
 
 Deck presets are bundled with the app and published in the open [peyara-actions](https://github.com/ayonshafiul/peyara-actions) repository. Presets describe shortcuts and actions only; they do not contain personal data. Your custom decks and layout choices are stored locally on your phone.
 

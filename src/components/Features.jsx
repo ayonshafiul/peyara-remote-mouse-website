@@ -49,14 +49,13 @@ const ICONS = {
 const FEATURES = [
   {
     icon: "deck",
-    title: "Free Stream Deck",
-    text: "Tap to fire shortcuts and macros on your PC. Hundreds of presets for popular desktop apps ship with the app.",
-    tag: "Free",
+    title: "The free Deck",
+    text: "A grid of one-tap shortcuts for the app in focus — like a Stream Deck, minus the hardware and the price. Hundreds of presets included.",
   },
   {
     icon: "focus",
     title: "Follows your focus",
-    text: "Switch from Photoshop to Figma or VS Code and the Deck switches with you. Prefer a fixed deck? Pick an app yourself instead.",
+    text: "Photoshop, Figma, VS Code — the grid reloads with each app's shortcuts as your focus changes. Prefer a fixed deck? Pick an app yourself.",
   },
   {
     icon: "sliders",
@@ -76,33 +75,30 @@ const FEATURES = [
   {
     icon: "shield",
     title: "Private by design",
-    text: "Everything stays on your local Wi-Fi. No account, no ads, no tracking — and the server, app and presets are open source.",
+    text: "Everything stays on your local Wi-Fi. No account, no ads, no tracking — the server, app and presets are open source.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className={styles.section} id="features">
+    <section className={`${styles.container} ${styles.section}`} id="features">
       <div className={styles.eyebrow}>Everything in one app</div>
-      <h2 className={styles.sectionTitle}>
-        A remote and a shortcut deck. One app.
-      </h2>
+      <h2 className={styles.sectionTitle}>A remote and a shortcut deck. One app.</h2>
       <p className={styles.sectionSub}>
         Mouse, keyboard, media, clipboard and app-aware shortcuts — all over
         your local network.
       </p>
-      <div className={styles.cardGrid}>
+      <div className={styles.featureGrid}>
         {FEATURES.map((f) => (
-          <div key={f.title} className={styles.card}>
-            {f.tag ? <span className={styles.cardTag}>{f.tag}</span> : null}
-            <span className={styles.cardIcon}>
+          <div key={f.title} className={styles.feature}>
+            <span className={styles.featureIcon}>
               <svg
-                width="18"
-                height="18"
+                width="19"
+                height="19"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="1.7"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >

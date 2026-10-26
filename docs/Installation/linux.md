@@ -38,7 +38,7 @@ Requirements (`xdg-desktop-portal` and `xdg-desktop-portal-gnome`) are preinstal
 
 ## Open the Deck
 
-Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Stream Deck guide](/docs/stream-deck).
+Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the app in focus. See the [Deck guide](/docs/deck).
 
 ## Updating
 

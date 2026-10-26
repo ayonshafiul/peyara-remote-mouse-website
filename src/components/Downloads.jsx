@@ -16,8 +16,8 @@ export default function Downloads() {
         shortcuts.
       </p>
       <div className={styles.dlGrid}>
-        <div className={styles.dlCard}>
-          <h3>Desktop Server</h3>
+        <div className={styles.dlGroup}>
+          <h3>Desktop server</h3>
           <p>
             Tiny (~5 MB) native Rust server for Windows, macOS and Linux.
             Handles the mouse, keyboard, media, clipboard and the app-focused
@@ -44,15 +44,15 @@ export default function Downloads() {
             Source: <a href={SERVER_REPO}>ayonshafiul/peyara-rust-server</a>
           </div>
         </div>
-        <div className={styles.dlCard}>
-          <h3>Mobile App + Deck</h3>
+        <div className={styles.dlGroup}>
+          <h3>Mobile app + Deck</h3>
           <p>
-            Touchpad, keyboard, media, clipboard and the free Stream Deck for
-            Android and iOS. Hundreds of presets included.
+            Touchpad, keyboard, media, clipboard and the free Deck for Android
+            and iOS. Hundreds of presets included.
           </p>
           <div className={styles.dlBtns}>
             <a
-              className={`${styles.dlBtn} ${styles.dlBtnTeal}`}
+              className={styles.dlBtn}
               href="https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara"
             >
               Google Play
@@ -68,7 +68,7 @@ export default function Downloads() {
             </a>
           </div>
           <div className={styles.dlNote}>
-            Deck guide: <Link to="/docs/stream-deck">how the Deck works</Link>
+            Deck guide: <Link to="/docs/deck">how the Deck works</Link>
             {" · "}
             Source: <a href={CLIENT_REPO}>ayonshafiul/peyara-mouse</a>
           </div>

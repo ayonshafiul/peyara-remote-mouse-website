@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Peyara Remote Mouse",
   tagline:
-    "Wireless mouse, keyboard and media remote for your PC — plus a free Stream Deck that follows the app in focus. Tiny ~5 MB open-source server, no ads.",
+    "Wireless mouse, keyboard and media remote for your PC — plus the free Deck: one-tap shortcuts for the app in focus. Tiny ~5 MB open-source server, no ads.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -107,6 +107,21 @@ const config = {
     ],
   ],
 
+  plugins: [
+    // /docs/stream-deck was renamed to /docs/deck — keep the old URL working
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            from: "/docs/stream-deck",
+            to: "/docs/deck",
+          },
+        ],
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -115,10 +130,10 @@ const config = {
         defaultMode: "dark",
         respectPrefersColorScheme: true,
       },
-      announcementBar: {
+  announcementBar: {
         id: "deck-launch",
         content:
-          'New: a free Stream Deck for your PC is here — hundreds of app presets. <a href="/docs/stream-deck">See how it works →</a>',
+          'New: the Deck is here — one-tap shortcuts for the app in focus, with hundreds of presets. <a href="/docs/deck">See how it works →</a>',
         backgroundColor: "#0b1220",
         textColor: "#f8fafc",
         isCloseable: true,
@@ -138,8 +153,8 @@ const config = {
             to: "/docs/get-started",
           },
           {
-            to: "/docs/stream-deck",
-            label: "Stream Deck",
+            to: "/docs/deck",
+            label: "Deck",
             position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
@@ -162,41 +177,41 @@ const config = {
         ],
       },
       metadata: [
-        {
-          name: "keywords",
-          content:
-            "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, phone stream deck, free stream deck, mobile stream deck, mobile macro pad, app shortcut presets, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
-        },
-        {
-          name: "description",
-          content:
-            "Peyara turns your phone into a wireless mouse, keyboard and media remote — plus a free Stream Deck that follows the desktop app in focus. Tiny ~5 MB open-source Rust server for Windows, macOS and Linux. Pair by QR over Wi-Fi. No ads, no tracking, no account.",
-        },
-        {
-          property: "og:title",
-          content:
-            "Peyara Remote Mouse — Wireless Mouse & Free Stream Deck",
-        },
-        {
-          property: "og:description",
-          content:
-            "Wireless mouse, keyboard, media and clipboard control from your phone, plus a free Stream Deck with hundreds of app presets. Tiny open-source server, QR pairing over Wi-Fi, no ads.",
-        },
-        {
-          property: "og:image",
-          content:
-            "https://peyara-remote-mouse.vercel.app/img/social-banner.png",
-        },
-        {
-          name: "twitter:title",
-          content:
-            "Peyara Remote Mouse — Wireless Mouse & Free Stream Deck",
-        },
-        {
-          name: "twitter:description",
-          content:
-            "Control your PC from your phone and fire app shortcuts from a free, focus-aware Stream Deck. Open source, local-only and ad-free.",
-        },
+          {
+            name: "keywords",
+            content:
+              "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, stream deck alternative, free stream deck alternative, phone stream deck, mobile macro pad, app shortcut presets, shortcut pad, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
+          },
+          {
+            name: "description",
+            content:
+              "Peyara turns your phone into a wireless mouse, keyboard and media remote — plus the free Deck: one-tap shortcuts for the desktop app in focus, a Stream Deck alternative built in. Tiny ~5 MB open-source Rust server for Windows, macOS and Linux. Pair by QR over Wi-Fi. No ads, no tracking, no account.",
+          },
+          {
+            property: "og:title",
+            content:
+              "Peyara Remote Mouse — Wireless Mouse & Free Shortcut Deck",
+          },
+          {
+            property: "og:description",
+            content:
+              "Wireless mouse, keyboard, media and clipboard control from your phone, plus the free Deck — one-tap shortcuts for the app in focus, with hundreds of presets. A free Stream Deck alternative. Tiny open-source server, QR pairing over Wi-Fi, no ads.",
+          },
+          {
+            property: "og:image",
+            content:
+              "https://peyara-remote-mouse.vercel.app/img/social-banner.png",
+          },
+          {
+            name: "twitter:title",
+            content:
+              "Peyara Remote Mouse — Wireless Mouse & Free Shortcut Deck",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Control your PC from your phone and fire app shortcuts from a free, focus-aware per-app deck — a Stream Deck alternative. Open source, local-only and ad-free.",
+          },
         {
           name: "robots",
           content: "index, follow",
@@ -211,7 +226,7 @@ const config = {
         },
       ],
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             title: "Product",
@@ -221,8 +236,8 @@ const config = {
                 to: "/docs/get-started",
               },
               {
-                label: "Stream Deck Guide",
-                to: "/docs/stream-deck",
+                label: "Deck Guide",
+                to: "/docs/deck",
               },
               {
                 label: "Troubleshooting",

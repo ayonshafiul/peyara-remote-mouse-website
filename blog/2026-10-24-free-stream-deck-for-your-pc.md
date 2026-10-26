@@ -36,4 +36,4 @@ No account, no cloud sync, no subscription.
 
 The Deck runs through the same tiny Rust server that already handles the touchpad, keyboard, media and clipboard. If Peyara is connected, the Deck is ready.
 
-[Get started](/docs/get-started) · [Read the Deck guide](/docs/stream-deck) · [Browse presets](https://github.com/ayonshafiul/peyara-actions)
+[Get started](/docs/get-started) · [Read the Deck guide](/docs/deck) · [Browse presets](https://github.com/ayonshafiul/peyara-actions)

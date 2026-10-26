@@ -37,4 +37,4 @@ The Deck falls back to the app in focus. Make sure the desktop app is actually f
 
 ## Add or fix a preset
 
-Presets are open source in [ayonshafiul/peyara-actions](https://github.com/ayonshafiul/peyara-actions). Open a pull request there with a new preset or a correction. See the [Stream Deck guide](/docs/stream-deck) for how decks work.
+Presets are open source in [ayonshafiul/peyara-actions](https://github.com/ayonshafiul/peyara-actions). Open a pull request there with a new preset or a correction. See the [Deck guide](/docs/deck) for how decks work.
