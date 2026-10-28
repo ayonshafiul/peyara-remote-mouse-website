@@ -1,12 +1,12 @@
 ---
-slug: free-stream-deck-for-your-pc
-title: Your Phone Is Now a Free Stream Deck
-tags: [stream deck, shortcuts, release, remote mouse]
+slug: free-shortcuts-deck-for-your-pc
+title: Your Phone Is Now a Free Shortcuts Deck
+tags: [shortcuts deck, shortcuts, release, remote mouse]
 authors: ayonshafiul
 date: 2026-10-24
 ---
 
-Peyara started as a way to leave the mouse behind. Today the other half arrives: **a free Stream Deck inside the app**, so the phone that moves your cursor can also fire the shortcuts you reach for all day.
+Peyara started as a way to leave the mouse behind. Today the other half arrives: **a free Shortcuts Deck inside the app**, so the phone that moves your cursor can also fire the shortcuts you reach for all day.
 
 <!--truncate-->
 

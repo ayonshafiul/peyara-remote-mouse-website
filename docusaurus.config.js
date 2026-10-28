@@ -108,7 +108,7 @@ const config = {
   ],
 
   plugins: [
-    // /docs/stream-deck was renamed to /docs/deck — keep the old URL working
+    // renamed pages keep their old URLs working
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -116,6 +116,10 @@ const config = {
           {
             from: "/docs/stream-deck",
             to: "/docs/deck",
+          },
+          {
+            from: "/blog/free-stream-deck-for-your-pc",
+            to: "/blog/free-shortcuts-deck-for-your-pc",
           },
         ],
       },
