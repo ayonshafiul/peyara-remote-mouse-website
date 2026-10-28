@@ -1,15 +1,10 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import { Icon } from "@iconify/react";
 import styles from "../pages/index.module.css";
 import AllDecksMock from "./AllDecksMock";
 
 const PRESETS_REPO = "https://github.com/ayonshafiul/peyara-actions";
-
-const CHECK = (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-    <path d="m4.5 12.5 5 5 10-11" />
-  </svg>
-);
 
 const POINTS = [
   "A square grid of one-tap shortcuts for whichever app has focus — Photoshop open? Every square is a Photoshop action.",
@@ -35,7 +30,7 @@ export default function StreamDeck() {
           <ul className={styles.checkList}>
             {POINTS.map((point) => (
               <li key={point}>
-                {CHECK}
+                <Icon icon="lucide:check" width={15} height={15} />
                 <span>{point}</span>
               </li>
             ))}

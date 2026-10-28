@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import Head from "@docusaurus/Head";
+import { Icon } from "@iconify/react";
 import Layout from "@theme/Layout";
 
 import styles from "./index.module.css";
@@ -129,21 +130,27 @@ function OpenSource() {
               <span className={styles.repoName}>peyara-rust-server</span>
             </span>
             <span className={styles.repoDesc}>Desktop server</span>
-            <span className={styles.repoArrow}>↗</span>
+            <span className={styles.repoArrow}>
+              <Icon icon="lucide:arrow-up-right" />
+            </span>
           </a>
           <a className={styles.repoRow} href={CLIENT_REPO}>
             <span>
               <span className={styles.repoName}>peyara-mouse</span>
             </span>
             <span className={styles.repoDesc}>Mobile app</span>
-            <span className={styles.repoArrow}>↗</span>
+            <span className={styles.repoArrow}>
+              <Icon icon="lucide:arrow-up-right" />
+            </span>
           </a>
           <a className={styles.repoRow} href={PRESETS_REPO}>
             <span>
               <span className={styles.repoName}>peyara-actions</span>
             </span>
             <span className={styles.repoDesc}>Deck presets</span>
-            <span className={styles.repoArrow}>↗</span>
+            <span className={styles.repoArrow}>
+              <Icon icon="lucide:arrow-up-right" />
+            </span>
           </a>
         </div>
       </div>
