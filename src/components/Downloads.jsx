@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "@docusaurus/Link";
 import styles from "../pages/index.module.css";
+import DownloadModal from "./DownloadModal";
 
 const SERVER_REPO = "https://github.com/ayonshafiul/peyara-rust-server";
 const CLIENT_REPO = "https://github.com/ayonshafiul/peyara-mouse";
 
 export default function Downloads() {
+  const [downloadOpen, setDownloadOpen] = useState(false);
   return (
     <section className={styles.downloadSection} id="download">
       <div className={styles.eyebrow}>Download</div>
@@ -24,12 +26,13 @@ export default function Downloads() {
             Deck — all on your local network.
           </p>
           <div className={styles.dlBtns}>
-            <a
-              className={`${styles.dlBtn} ${styles.dlBtnPrimary}`}
-              href={`${SERVER_REPO}/releases`}
+            <button
+              type="button"
+              className={`${styles.dlBtn} ${styles.dlBtnPrimary} ${styles.modalTrigger}`}
+              onClick={() => setDownloadOpen(true)}
             >
               Latest release
-            </a>
+            </button>
             <a className={styles.dlBtn} href="/docs/Installation/windows">
               Windows
             </a>
@@ -74,6 +77,7 @@ export default function Downloads() {
           </div>
         </div>
       </div>
+      {downloadOpen && <DownloadModal onClose={() => setDownloadOpen(false)} />}
     </section>
   );
 }

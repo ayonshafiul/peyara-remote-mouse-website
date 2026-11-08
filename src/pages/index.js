@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "@docusaurus/Link";
 import Head from "@docusaurus/Head";
 import { Icon } from "@iconify/react";
@@ -9,14 +9,21 @@ import HeroScene from "../components/HeroScene";
 import Features from "../components/Features";
 import StreamDeck from "../components/StreamDeck";
 import Downloads from "../components/Downloads";
+import DownloadModal from "../components/DownloadModal";
 
 const SERVER_REPO = "https://github.com/ayonshafiul/peyara-rust-server";
 const CLIENT_REPO = "https://github.com/ayonshafiul/peyara-mouse";
 const PRESETS_REPO = "https://github.com/ayonshafiul/peyara-actions";
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=io.github.ayonshafiul.peyara";
+const APP_STORE_URL =
+  "https://apps.apple.com/us/app/peyara-remote-mouse/id6743374036";
+
 const PLATFORMS = ["Windows", "macOS", "Linux", "Android", "iOS"];
 
 function Hero() {
+  const [downloadOpen, setDownloadOpen] = useState(false);
   return (
     <header>
       <div className={styles.heroInner}>
@@ -32,11 +39,23 @@ function Hero() {
             in focus. Local, private, open source.
           </p>
           <div className={styles.ctaRow}>
-            <Link className="button--primary-cta" to="/docs/get-started">
+            <button
+              type="button"
+              className={`button--primary-cta ${styles.modalTrigger}`}
+              onClick={() => setDownloadOpen(true)}
+            >
+              Download server
+            </button>
+            <Link className="button--ghost-cta" to="/docs/get-started">
               Get started
             </Link>
-            <a className="button--ghost-cta" href={`${SERVER_REPO}/releases`}>
-              Download server
+          </div>
+          <div className={styles.storeBadges}>
+            <a href={PLAY_STORE_URL} aria-label="Get Peyara on Google Play">
+              <img src="/img/google-play.png" alt="Get it on Google Play" />
+            </a>
+            <a href={APP_STORE_URL} aria-label="Download Peyara on the App Store">
+              <img src="/img/appstore.png" alt="Download on the App Store" />
             </a>
           </div>
           <p className={styles.platformLine}>
@@ -53,6 +72,7 @@ function Hero() {
 
         <HeroScene />
       </div>
+      {downloadOpen && <DownloadModal onClose={() => setDownloadOpen(false)} />}
     </header>
   );
 }
