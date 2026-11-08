@@ -46,8 +46,30 @@ const config = {
     {
       tagName: "meta",
       attributes: {
+        property: "og:url",
+        content: "https://peyara-remote-mouse.vercel.app/",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
         name: "twitter:card",
         content: "summary_large_image",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:image",
+        content:
+          "https://peyara-remote-mouse.vercel.app/img/social-banner.png",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:url",
+        content: "https://peyara-remote-mouse.vercel.app/",
       },
     },
     {
@@ -184,7 +206,7 @@ const config = {
           {
             name: "keywords",
             content:
-              "remote mouse, phone as mouse, wireless mouse app, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, stream deck alternative, free stream deck alternative, phone stream deck, mobile macro pad, app shortcut presets, shortcut pad, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
+              "remote mouse, phone as mouse, wireless mouse app, smooth mouse movement, remote keyboard, wifi mouse, wifi keyboard, media remote, clipboard sync, shortcut deck, stream deck alternative, free stream deck alternative, phone stream deck, mobile macro pad, app shortcut presets, shortcut pad, qr pair touchpad, android remote mouse, ios remote mouse, open source remote mouse, rust remote mouse, tiny mouse server, windows mac linux remote control",
           },
           {
             name: "description",

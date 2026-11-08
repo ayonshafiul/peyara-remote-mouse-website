@@ -1,6 +1,8 @@
 ---
 title: Installation for Windows
 sidebar_position: 1
+description: Download and install the Peyara Rust server on Windows — run the installer, allow the firewall, scan the QR code and control your PC from your phone.
+keywords: [windows install, peyara server windows, exe setup]
 ---
 
 Download the latest release from the [**Releases** page](https://github.com/ayonshafiul/peyara-rust-server/releases). Look for the file named `Peyara-Server-<version>-windows-x86_64-setup.exe`.

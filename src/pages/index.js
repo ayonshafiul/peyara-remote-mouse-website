@@ -29,9 +29,9 @@ function Hero() {
       <div className={styles.heroInner}>
         <div className={styles.heroCopy}>
           <h1 className={styles.title}>
-            Your phone is your mouse.
+            Your phone is your mouse
             <br />
-            Now it&apos;s your <span className={styles.titleAccent}>shortcut&nbsp;deck.</span>
+            and <span className={styles.titleAccent}>shortcut&nbsp;deck.</span>
           </h1>
           <p className={styles.subtitle}>
             Peyara turns your phone into a wireless touchpad, keyboard and media
@@ -74,6 +74,54 @@ function Hero() {
       </div>
       {downloadOpen && <DownloadModal onClose={() => setDownloadOpen(false)} />}
     </header>
+  );
+}
+
+function WhatsNew() {
+  return (
+    <section className={`${styles.container} ${styles.section}`}>
+      <div className={styles.smoothGrid}>
+        <div>
+          <div className={styles.eyebrow}>New update</div>
+          <h2 className={styles.sectionTitle}>
+            Super smooth mouse movement.
+          </h2>
+          <p className={styles.sectionSub} style={{ marginBottom: "1.8rem" }}>
+            The latest server and app releases rebuild the input pipeline, so
+            the cursor glides instead of jumping. Update both sides to feel it.
+          </p>
+          <a
+            className="button--primary-cta"
+            href={`${SERVER_REPO}/releases/latest`}
+          >
+            Get the latest server
+          </a>
+        </div>
+        <ul className={styles.smoothList}>
+          <li>
+            <strong>Buttery cursor glide</strong>
+            <span>
+              Motion events stream continuously over your local network, so
+              quick flicks and slow, precise moves both track cleanly.
+            </span>
+          </li>
+          <li>
+            <strong>Lower perceived latency</strong>
+            <span>
+              A leaner Rust input path cuts the delay between finger and
+              cursor — taps, drags and scrolls respond instantly.
+            </span>
+          </li>
+          <li>
+            <strong>Same tiny footprint</strong>
+            <span>
+              All of it still fits in the ~5 MB server. No new setup, no new
+              permissions — just update and keep using it.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
   );
 }
 
@@ -225,13 +273,15 @@ export default function Home() {
   return (
     <Layout
       title="Wireless Mouse, Keyboard & Free Shortcut Deck for Your PC"
-      description="Peyara turns your phone into a wireless mouse, keyboard and media remote — plus the free Deck: one-tap shortcuts for the focused desktop app, a Stream Deck alternative built in. Tiny open-source server for Windows, macOS and Linux. Pair by QR over Wi-Fi."
+      description="Peyara turns your phone into a wireless mouse, keyboard and media remote with super smooth movement — plus the free Deck: one-tap shortcuts for the focused desktop app, a Stream Deck alternative built in. Tiny open-source server for Windows, macOS and Linux. Pair by QR over Wi-Fi."
       keywords={[
         "remote mouse",
         "phone as mouse",
         "wireless touchpad app",
+        "smooth mouse movement",
         "remote keyboard",
         "media remote",
+        "shortcut deck",
         "stream deck alternative",
         "free stream deck alternative",
         "mobile macro pad",
@@ -270,6 +320,7 @@ export default function Home() {
       <main>
         <Hero />
         <StreamDeck />
+        <WhatsNew />
         <Features />
         <HowItWorks />
         <OpenSource />

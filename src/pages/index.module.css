@@ -970,6 +970,50 @@
   opacity: 0.68;
 }
 
+/* ---------- smooth update highlight ---------- */
+
+.smoothGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 880px) {
+  .smoothGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.smoothList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.smoothList li {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding: 14px 2px;
+}
+
+.smoothList li:last-child {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.smoothList strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.smoothList span {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  opacity: 0.68;
+}
+
 /* ---------- steps ---------- */
 
 .steps {

@@ -1,6 +1,8 @@
 ---
 title: Installation For Mac
 sidebar_position: 2
+description: Download and install the Peyara server on macOS — fix the unsigned-app Gatekeeper block with xattr, grant Accessibility, and handle updates.
+keywords: [mac install, peyara server mac, unsigned app gatekeeper, accessibility permission]
 ---
 
 Download the latest release from the [**Releases** page](https://github.com/ayonshafiul/peyara-rust-server/releases). Look for the file named `Peyara-Server-<version>-macos-arm64.dmg` (Apple Silicon).

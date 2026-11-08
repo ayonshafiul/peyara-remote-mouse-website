@@ -1,6 +1,8 @@
 ---
 title: Troubleshooting
 sidebar_position: 3
+description: Fix common Peyara issues — QR pairing, Wi-Fi connection, and mouse or keyboard input not working on Windows, macOS or Linux.
+keywords: [troubleshooting, qr code invalid, mouse not working, connection issues]
 ---
 
 # Troubleshooting

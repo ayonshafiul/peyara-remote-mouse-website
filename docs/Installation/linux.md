@@ -1,6 +1,8 @@
 ---
 title: Installation For Linux
 sidebar_position: 3
+description: Download and install the Peyara server on Linux — .deb and .rpm packages, Wayland remote-interaction approval, and optional build from source.
+keywords: [linux install, peyara server linux, deb rpm, wayland remote desktop]
 ---
 
 Download the latest release from the [**Releases** page](https://github.com/ayonshafiul/peyara-rust-server/releases):
