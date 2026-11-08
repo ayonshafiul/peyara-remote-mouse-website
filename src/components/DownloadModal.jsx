@@ -62,14 +62,15 @@ const CONTENT = {
       "Grant Accessibility permission (System Settings → Privacy & Security → Accessibility) so the phone can drive your mouse and keyboard.",
       "Start the server. It shows a QR code — scan it with the mobile app while both devices are on the same Wi-Fi.",
     ],
-    command: "sudo xattr -cr /Applications/Peyara*.app",
+    command: 'sudo xattr -cr "/Applications/Peyara Server.app"',
     update: {
-      title: "Updating from a previous version?",
+      title: "Mouse not working after updating?",
       intro:
-        "macOS ties Accessibility to the exact app binary, so the mouse and keyboard stop working after an update until you reset it. Do one of these before launching the new version:",
+        "macOS ties Accessibility to the exact app binary, so input can stop working after an update. If that happens:",
       options: [
-        "Uninstall first (recommended): delete the old app from Applications, install fresh, and grant Accessibility again.",
-        "Or remove and re-toggle: System Settings → Privacy & Security → Accessibility, select Peyara and press -, install the new version, then toggle it back on and relaunch.",
+        "Go to System Settings → Privacy & Security → Accessibility, click the Peyara entry to highlight it, then press the minus (-) button below the list.",
+        "Launch Peyara again — when the app asks for permission, toggle it back on.",
+        "Quit and relaunch the app.",
       ],
     },
   },

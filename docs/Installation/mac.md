@@ -14,7 +14,7 @@ Download the latest release from the [**Releases** page](https://github.com/ayon
 3. The app is unsigned, so macOS Gatekeeper will block it on first launch ("app is damaged" / "cannot be opened"). Open **Terminal**, then copy and paste the following command and press Enter to clear the quarantine flag:
 
 ```bash
-sudo xattr -cr /Applications/Peyara*.app
+sudo xattr -cr "/Applications/Peyara Server.app"
 ```
 
 Enter your Mac password when prompted. Then launch Peyara from Applications. (Alternatively, right-click the app, choose "Open", then confirm — but the `xattr` command above is the reliable fix for unsigned builds.)
@@ -27,16 +27,14 @@ Once connected, tap the **Deck** icon on the touchpad to fire shortcuts for the 
 
 ## Updating
 
-macOS ties the Accessibility permission to the exact app binary. If you install a new version over the old one, the mouse and keyboard will stop working until the permission is re-granted. Do **one** of the following before launching the new version:
+Install the new version and launch it. macOS ties the Accessibility permission to the exact app binary, so after updating the mouse and keyboard may stop working. If that happens:
 
-**Option A — uninstall first (recommended):** delete the old Peyara app from Applications (drag it to the Bin), then follow the Installation steps above. macOS clears the stale permission entry and you grant it fresh.
-
-**Option B — remove and re-toggle the permission:** go to System Settings → Privacy & Security → Accessibility, select Peyara and press `-` to remove it, then install the new version, launch it, and toggle the permission back on when prompted. Quit and relaunch Peyara afterwards.
-
-Without one of these, the updated app keeps the old permission entry and input silently stops working.
+1. Go to System Settings → Privacy & Security → Accessibility, click the Peyara entry to highlight it, then press the minus (-) button below the list to remove it.
+2. Launch Peyara again — when the app asks for permission, toggle Accessibility back on.
+3. Quit and relaunch the app.
 
 ## Troubleshooting
 
-- App won't open ("damaged" / "unidentified developer"): re-run `sudo xattr -cr /Applications/Peyara*.app`, then launch again.
-- Input not working (especially right after an update): the Accessibility permission is tied to the old binary — remove it and re-toggle per [Updating](/docs/Installation/mac#updating), then quit and relaunch the app.
+- App won't open ("damaged" / "unidentified developer"): re-run `sudo xattr -cr "/Applications/Peyara Server.app"`, then launch again.
+- Input not working (especially right after an update): remove the Peyara entry with minus and toggle it back on when the app asks — see [Updating](/docs/Installation/mac#updating).
 - Phone cannot find the PC: make sure both are on the same Wi-Fi.
